@@ -5,9 +5,6 @@
     .tencol
       -@trip_reports.each do |report|
         .row{class: report == @trip_reports.last ? "last" : ""}
-          =render partial: "snippet", locals: {report: report}
+          =render partial: "snippet", locals: {trip_report: report, in_context: true, truncate: 1000}
     .twocol.last
-      .years
-        %h5=link_to "Recent", trip_reports_path
-        -@years.each do |year|
-          %h5=link_to year, trip_reports_path(year: year)
+      =render partial: "years"

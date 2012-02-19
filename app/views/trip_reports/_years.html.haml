@@ -1,0 +1,4 @@
+.years
+  %h5=link_to "Recent", trip_reports_path
+  -Date.today.year.downto(TripReport::EARLIEST_YEAR).each do |year|
+    %h5=link_to year, trip_reports_path(year: year)

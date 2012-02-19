@@ -2,7 +2,7 @@ class TripReport < ActiveRecord::Base
   belongs_to :user
   has_many :photos
   validates_presence_of :date, :destination, :report
-  default_scope order: "date DESC"
+  scope :recent,  order: "date DESC"
   
   extend FriendlyId
   friendly_id :destination_and_date, use: :slugged

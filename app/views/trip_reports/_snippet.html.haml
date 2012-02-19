@@ -1,9 +1,9 @@
 .trip_report.snippet
-  %h3=link_to report.destination, trip_report_path(report)
+  %h3=link_to "#{'Trip Report - ' unless in_context}#{trip_report.destination}", trip_report_path(trip_report)
     
-  %h5.byline
-    =link_to report.byline, trip_report_path(report)
+  -if in_context
+    %h5.byline=trip_report.byline
   
   .markdown
-    =markdown(report.report, 1000)
-  .read_more=link_to "…Read more", trip_report_path(report)
+    =markdown(trip_report.report, truncate)
+  .read_more=link_to "…Read more", trip_report_path(trip_report)

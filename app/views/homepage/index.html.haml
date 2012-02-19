@@ -3,12 +3,10 @@
 .homepage
   .row.last
     .eightcol
-      Brisket capicola jowl pork chop, ribeye pastrami chuck. Short loin chuck ground round, sausage shank drumstick turkey. Tail boudin ham, chuck venison jowl bresaola pig ham hock. Andouille capicola prosciutto short ribs, flank meatloaf bresaola filet mignon tail biltong ham venison shankle leberkas shoulder. Short ribs kielbasa sirloin, hamburger salami strip steak prosciutto beef ribs ham pork belly pastrami corned beef.
-
-      Meatball salami sirloin andouille shoulder hamburger, ball tip ham frankfurter short loin corned beef venison prosciutto beef. Meatloaf beef hamburger pork loin. Short loin boudin shoulder jerky bacon turducken. Pork chop pork belly biltong turkey. Spare ribs meatloaf andouille short ribs beef ribs pancetta sirloin strip steak.
-
-      Pork pancetta boudin ham ground round, short loin hamburger kielbasa chicken. Fatback cow turducken, turkey meatball ham rump tenderloin capicola brisket. Ribeye hamburger pork belly, venison beef t-bone brisket bresaola ball tip sirloin spare ribs ham hock chicken turducken. Pork chop ham strip steak pork loin. Pancetta frankfurter tenderloin, salami pork chop venison turducken swine. Tri-tip rump shankle, meatloaf pastrami pork loin tail.
-
+      -@items.each do |item|
+        .row
+          -if item.class == TripReport
+            =render partial: 'trip_reports/snippet', locals: {trip_report: item, in_context: false, truncate: 500}
     .fourcol.last
       .row
         %h3 Finding Us
