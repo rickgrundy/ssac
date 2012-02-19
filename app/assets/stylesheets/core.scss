@@ -69,6 +69,10 @@ a, a:visited {
   text-decoration: underline;
 }
 
+.error, .errors {
+  color: $error;
+}
+
 form {
   input, select, textarea {
     display: block;
@@ -112,5 +116,31 @@ figure {
   figcaption {
     text-align: center;
     font-size: 0.9em;
+  }
+}
+
+ol {
+  li {
+    list-style-type: decimal;
+    padding: $spacing/4;
+  }
+}
+
+dl {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-bottom: $spacing;
+  dt {
+    float: left;
+    width: 28%;
+    margin-right: 2%;
+    text-align: right;
+  }
+  dd {
+    float: left;
+    width: 70%;
+    text-align: left;
+    font-weight: bold;
   }
 }

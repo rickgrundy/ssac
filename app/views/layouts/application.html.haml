@@ -1,7 +1,9 @@
 !!!
 %html
   %head
-    %title Sydney Sub Aqua Club
+    %title="#{content_for :title} - SSAC"
+    %meta{name: "keywords", content: "scuba, sydney, sydney bsac, diving, club, dive courses, dive club, diving club, sub aqua club, dive trips, social diving, BSAC"}
+    %meta{name: "description", content: "SSAC is a Sydney dive club offering members SCUBA diving and social activities in the friendly environment of a BSAC branch."}
     =stylesheet_link_tag "application"
     =javascript_include_tag "application"
     =csrf_meta_tags
@@ -12,6 +14,7 @@
           %h1=link_to "Sydney Sub Aqua Club - BSAC 2373", root_path
           =link_to image_tag("banner.jpg", alt: "Sydney Sub Aqua Club - BSAC 2373"), root_path
         %nav
+          =link_to "Home", root_path
           =link_to "About the Club", club_info_path
           =link_to "Membership", membership_info_path
           =link_to "Trip Reports", "#"
