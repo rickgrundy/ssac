@@ -4,7 +4,7 @@
   .row.last
     .eightcol
       -@items.each do |item|
-        .row
+        .row{class: item == @items.last ? "last" : ""}
           -if item.class == TripReport
             =render partial: 'trip_reports/snippet', locals: {trip_report: item, in_context: false, truncate: 500}
     .fourcol.last
