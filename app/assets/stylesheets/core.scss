@@ -58,8 +58,18 @@ a, a:visited {
   text-decoration: underline;
 }
 
-.error, .errors {
+.flash {
+  width: auto;
+  padding: $spacing/2;
+  font-weight: bold;
+}
+.error, .alert {
   color: $error;
+  background: lighten($error, 45%);
+}
+.notice {
+  color: $notice;
+  background: lighten($notice, 45%);
 }
 
 form {

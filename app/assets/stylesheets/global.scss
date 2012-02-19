@@ -6,6 +6,7 @@ $subtle: #DDD;
 $very-subtle: #F5F5F5;
 $title: #193984;
 $error: #DA3838;
+$notice: #53B84D;
 
 @mixin rounded_corners($radius) {
   -moz-border-radius: $radius;

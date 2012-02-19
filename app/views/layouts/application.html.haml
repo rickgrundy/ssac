@@ -27,4 +27,8 @@
             %h2=content_for :title
           .threecol.last
             =render partial: "layouts/account"
+        =render partial: "layouts/flashes" unless flash.empty?
+            
         =yield
+        
+    =render partial: "layouts/google_analytics"
