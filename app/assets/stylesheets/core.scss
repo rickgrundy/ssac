@@ -79,9 +79,30 @@ form {
     padding: $spacing/2;
     margin-bottom: $spacing;
   }
+  
+  input[type='checkbox'], input[type='radio'] {
+    display: inline;
+  }
+  
+  input[type='submit'] {
+    cursor: pointer;
+  }
 
   span.note {
     font-style: italic;
     font-size: 0.8em;
+  }
+  
+  .field_with_errors {
+    color: $error;
+  }
+  
+  #error_explanation {
+    color: $error;
+    h2 {  
+      font-size: 1.6em;
+      color: $error;
+      margin-bottom: $spacing/2;
+    }
   }
 }
