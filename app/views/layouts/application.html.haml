@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %title Sydney Sub Aqua Club
+    =stylesheet_link_tag "application"
+    =javascript_include_tag "application"
+    =csrf_meta_tags
+  %body
+    =render partial: 'layouts/header'
+    =alert
+    =notice
+    =yield

@@ -1,0 +1,54 @@
+$spacing: 10px;
+
+$white: #FFF;
+$subtle: #DDD;
+
+@mixin rounded_corners($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin shadow($size: $spacing, $colour: $shadow) {
+  -moz-box-shadow: 0 0 $size 0 $colour;
+  -webkit-box-shadow: 0 0 $size 0 $colour;
+  box-shadow: 0 0 $size 0 $colour;
+}
+
+@mixin recessed($colour) {
+  background: $colour;
+  background: -webkit-gradient(linear, left bottom, left top, from($colour), to(darken($colour, 4%)));
+  background: -moz-linear-gradient(bottom, $colour,  darken($colour, 4%));  
+}
+
+@mixin gradient($colour, $dim: 20%) {
+  background: $colour;
+  background: -webkit-gradient(linear, left top, left bottom, from($colour), to(darken($colour, $dim)));
+  background: -moz-linear-gradient(top, $colour,  darken($colour, $dim));
+}
+
+
+@mixin bulleted_lists {
+  ul {
+    padding-left: 1.5em;
+    li {
+      list-style: square;
+      padding: $spacing/2 0;
+    }
+  }
+}
+
+@mixin buttonify {
+  @include linkify;
+  @include gradient($button);
+  color: #FFF;
+  border: solid 1px darken($button, 15%);
+  padding: $spacing;
+  cursor: pointer;
+  &:hover {
+    background: $button;
+  }
+  &:active {
+    background: lighten($button, 5%);
+  }
+}

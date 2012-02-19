@@ -1,0 +1,24 @@
+@import "global";
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,700);
+
+body {
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 16px;
+}
+
+h2 {
+  font-weight: 100;
+  font-size: 2em;
+}
+
+input, select, textarea {
+  display: block;
+  border: solid 1px $subtle;
+  @include recessed($white);
+  padding: $spacing/2;
+}
+
+label {
+  display: block;
+  padding: $spacing 0 2px;
+}

@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
 gem 'jquery-rails'
+gem 'haml', '3.1.4'
+gem 'devise'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
