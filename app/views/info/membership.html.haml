@@ -10,7 +10,7 @@
         Membership of the Club will give you access to all of the diving we do, as well the chance to get to know a number of potential buddies to call up if there is no club dive. By booking as a group we can often take advantage of club bookings, meaning that you can dive some of the best sites at very reasonable prices.
       %p
         As a member you will be able to participate in a range of BSAC dive training courses including Sports Diver, Advanced Nitrox / Extended Range, O2 Administration and Dive Leader, all of which are available to club members with the appropriate qualifications. Please contact our training officer
-        =mail_to 'training@sydneysubaquaclub.com', get_property('committee_training_officer')
+        =mail_to 'training@sydneysubaquaclub.com', Committee.training_officer
         for further details.
     .threecol.last
       %figure
@@ -25,7 +25,7 @@
       %ol
         %li
           To join BSAC, contact our secretary
-          = mail_to 'secretary@sydneysubaquaclub.com', get_property('committee_secretary')
+          = mail_to 'secretary@sydneysubaquaclub.com', Committee.secretary
           and get a copy this old-fashioned carbon paper form at the 
           = link_to 'Wednesday night meeting.', club_info_path
         %li
@@ -34,14 +34,14 @@
           and a
           = link_to 'SSAC Membership Form.', '/files/SSAC_Membership_Form_v2.doc'
           Give/email both to 
-          = mail_to 'secretary@sydneysubaquaclub.com', get_property('committee_secretary')
+          = mail_to 'secretary@sydneysubaquaclub.com', Committee.secretary
           \.
         %li
           Pay the SSAC membership fee by transferring $30 to the club bank account (details below).
         %li
           Go diving!
         
-  .row
+  .row.last
     .twelvecol
       %h3#bank-account The Club Bank Account
       %p If you need to pay money into to the club account for any reason the account details are:

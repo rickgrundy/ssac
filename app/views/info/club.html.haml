@@ -1,7 +1,7 @@
 -content_for :title, "About the Club"
 
 .info
-  .row 
+  .row
     .sevencol
       %p 
         Welcome to the Sydney Sub Aqua Club. The club was formed in in Sydney in 2004 as a non-profit diving club and is a 
@@ -31,7 +31,7 @@
         =link_to "technical training.", "http://www.bsac.com/page.asp?section=3635&sectionTitle=Accelerated+Decompression+Procedures"
       %p Many of our members also have a range experience and qualifications from other agencies in rebreather diving, boat skippering, cave diving and first aid and are always eager to offer advice.
 
-  .row 
+  .row
     .sevencol
       %p It is traditional for at least one major overseas trip to be organised every year (often around Easter) and there are usually two or three other diving holidays catering to various interests.
       %p 
@@ -81,30 +81,30 @@
         (opposite Darling Harbour wharf 5).
       %p Members and guests get together to talk about diving and plan the future calendar of events. These nights are a general gathering of friends and are a great chance for anyone who's considering joining the club to say hello and find out more about us.
 
-.row
-  .twelvecol
-    %h3#bank-account The SSAC Committee
-    %p
-      SSAC has seven committee members who are elected once a year to help organise and run the club. Any member can volunteer to stand for a commitee position and this year's lucky winners are:
-    %dl
-      %dt Chairman
-      %dd=mail_to 'chairman@sydneysubaquaclub.com', get_property('committee_chairman')
+  .row.last
+    .twelvecol
+      %h3#bank-account The SSAC Committee
+      %p
+        SSAC has seven committee members who are elected once a year to help organise and run the club. Any member can volunteer to stand for a commitee position and this year's lucky winners are:
+      %dl
+        %dt Chairman
+        %dd=mail_to 'chairman@sydneysubaquaclub.com', Committee.chairman
 
-      %dt Diving Officer
-      %dd=mail_to 'divingofficer@sydneysubaquaclub.com', get_property('committee_diving_officer')
+        %dt Diving Officer
+        %dd=mail_to 'divingofficer@sydneysubaquaclub.com', Committee.diving_officer
 
-      %dt Secretary
-      %dd=mail_to 'secretary@sydneysubaquaclub.com', get_property('committee_secretary')
+        %dt Secretary
+        %dd=mail_to 'secretary@sydneysubaquaclub.com', Committee.secretary
 
-      %dt Treasurer
-      %dd=mail_to 'finance@sydneysubaquaclub.com', get_property('committee_treasurer')
+        %dt Treasurer
+        %dd=mail_to 'finance@sydneysubaquaclub.com', Committee.treasurer
 
-      %dt Training Officer
-      %dd=mail_to 'training@sydneysubaquaclub.com', get_property('committee_training_officer')
+        %dt Training Officer
+        %dd=mail_to 'training@sydneysubaquaclub.com', Committee.training_officer
 
-      %dt Expeditions Officer
-      %dd=mail_to 'diving@sydneysubaquaclub.com', get_property('committee_expeditions_officer')
+        %dt Expeditions Officer
+        %dd=mail_to 'diving@sydneysubaquaclub.com', Committee.expeditions_officer
 
-      %dt Web Officer
-      %dd=mail_to 'web@sydneysubaquaclub.com', get_property('committee_web_officer')
-    %p Feel free to email anyone on this list with any questions you have about the club or general diving in Sydney.      
+        %dt Web Officer
+        %dd=mail_to 'web@sydneysubaquaclub.com', Committee.web_officer
+      %p Feel free to email anyone on this list with any questions you have about the club or general diving in Sydney.      

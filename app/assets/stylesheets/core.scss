@@ -49,17 +49,6 @@ img {
   display: block;
 }
 
-.section {
-  padding-bottom: $spacing;
-  margin-bottom: $spacing;
-  border-bottom: solid 1px $subtle
-}
-.section.last {
-  border-bottom: 0;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
 p {
   margin: 0 0 $spacing;
 }

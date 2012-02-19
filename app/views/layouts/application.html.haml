@@ -17,14 +17,14 @@
           =link_to "Home", root_path
           =link_to "About the Club", club_info_path
           =link_to "Membership", membership_info_path
-          =link_to "Trip Reports", "#"
-          =link_to "Planned Dives", "#"
-          =link_to "Files", "#"
+          =link_to "Trip Reports", trip_reports_path
+          =link_to "Planned Dives", planned_dives_path
+          =link_to "Members' Files", files_path if current_user
       
       .grid
-        .row
+        .row.header
           .ninecol
             %h2=content_for :title
           .threecol.last
             =render partial: "layouts/account"
-        .row=yield
+        =yield
