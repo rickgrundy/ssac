@@ -1,0 +1,9 @@
+.trip_report.snippet
+  %h3=link_to report.destination, trip_report_path(report)
+    
+  %h5.byline
+    =link_to report.byline, trip_report_path(report)
+  
+  .markdown
+    =markdown(report.report, 1000)
+  .read_more=link_to "…Read more", trip_report_path(report)

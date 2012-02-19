@@ -25,17 +25,20 @@ nav {
 
 h1, h2, h3, h4, h5 {
   line-height: 1em;
+  font-weight: 100;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 h2 {
-  font-weight: 100;
   font-size: 2.8em;
   margin-bottom: $spacing*2;
   color: $link;
 }
 
 h3, h4 {
-  font-weight: 100;
   font-size: 2em;
   margin-bottom: $spacing;
   color: $link;
@@ -43,6 +46,11 @@ h3, h4 {
 
 h4 {
   font-size: 1.4em;
+}
+
+h5 {
+  font-size: 1.3em;
+  margin-bottom: $spacing;
 }
 
 img {
@@ -120,6 +128,7 @@ figure {
 }
 
 ol {
+  padding-left: 2em;
   li {
     list-style-type: decimal;
     padding: $spacing/4;
@@ -142,5 +151,20 @@ dl {
     width: 70%;
     text-align: left;
     font-weight: bold;
+  }
+}
+
+
+
+.snippet {
+  h3 {
+    margin-bottom: $spacing/2;
+  }
+  .byline {
+    font-size: 1.2em;
+  }
+  .read_more {
+    float: right;
+    margin-top: -$spacing;
   }
 }

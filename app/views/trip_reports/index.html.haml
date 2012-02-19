@@ -1,7 +1,13 @@
--content_for :title, "Trip Reports"
+-content_for :title, "Trip Reports#{" from #{@year}" if @year}"
 
 .trip_reports
   .row.last
-    .twelvecol
+    .tencol
       -@trip_reports.each do |report|
-        .report=markdown(report.report)
+        .row{class: report == @trip_reports.last ? ".last" : ""}
+          =render partial: "snippet", locals: {report: report}
+    .twocol.last
+      .years
+        %h5=link_to "Recent", trip_reports_path
+        -@years.each do |year|
+          %h5=link_to year, trip_reports_path(year: year)
