@@ -9,14 +9,14 @@
   <p><%= f.label :email %>
   <%= f.email_field :email %></p>
 
-  <p><%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
-  <%= f.password_field :password %></p>
+  <p><%= f.label :password %> <span class="note">(leave blank for no change)</span>
+  <%= f.password_field :password, autocomplete: "off" %></p>
 
   <p><%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %></p>
+  <%= f.password_field :password_confirmation, autocomplete: "off" %></p>
 
-  <p><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
-  <%= f.password_field :current_password %></p>
+  <p><%= f.label :current_password %> <span class="note">(to confirm your changes)</span>
+  <%= f.password_field :current_password, autocomplete: "off" %></p>
 
   <p><%= f.submit "Update" %></p>
 <% end %>

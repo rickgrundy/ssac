@@ -2,8 +2,9 @@ $spacing: 10px;
 
 $text: #555;
 $link: #07C;
-$white: #FFF;
 $subtle: #DDD;
+$very-subtle: #F5F5F5;
+$title: #193984;
 
 @mixin rounded_corners($radius) {
   -moz-border-radius: $radius;
@@ -17,10 +18,10 @@ $subtle: #DDD;
   box-shadow: 0 0 $size 0 $colour;
 }
 
-@mixin recessed($colour) {
+@mixin recessed($colour: #FFF) {
   background: $colour;
-  background: -webkit-gradient(linear, left bottom, left top, from($colour), to(darken($colour, 4%)));
-  background: -moz-linear-gradient(bottom, $colour,  darken($colour, 4%));  
+  background: -webkit-gradient(linear, left bottom, left top, from($colour), to(darken($colour, 3%)));
+  background: -moz-linear-gradient(bottom, $colour,  darken($colour, 3%));  
 }
 
 @mixin gradient($colour, $dim: 20%) {

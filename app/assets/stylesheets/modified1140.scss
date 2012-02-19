@@ -1,48 +1,181 @@
 @import "global";
 
+/* ==================================================================================================================== */
+/* ! The 1140px Grid V2 by Andy Taylor \ http://cssgrid.net \ http://www.twitter.com/andytlr \ http://www.andytlr.com   */
+/* ==================================================================================================================== */
+
+.container {
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.row {
+width: 100%;
+max-width: 1140px;
+margin: 0 auto;
+overflow: hidden;
+}
+
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
+margin-right: 3.8%;
+float: left;
+min-height: 1px;
+}
+
+.row .onecol {
+width: 4.85%;
+}
+
+.row .twocol {
+width: 13.45%;
+}
+
+.row .threecol {
+width: 22.05%;
+}
+
+.row .fourcol {
+width: 30.75%;
+}
+
+.row .fivecol {
+width: 39.45%;
+}
+
+.row .sixcol {
+width: 48%;
+}
+
+.row .sevencol {
+width: 56.75%;
+}
+
+.row .eightcol {
+width: 65.4%;
+}
+
+.row .ninecol {
+width: 74.05%;
+}
+
+.row .tencol {
+width: 82.7%;
+}
+
+.row .elevencol {
+width: 91.35%;
+}
+
+.row .twelvecol {
+width: 100%;
+float: left;
+}
+
+.last {
+margin-right: 0px;
+}
+
+img, object, embed {
+max-width: 100%;
+}
+
+img {
+	height: auto;
+}
+
+
+/* Mobile */
+
+@media handheld, only screen and (max-width: 599px) {
+	
+	.row, body, .container {
+	width: 100%;
+	min-width: 0;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	}
+	
+	.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
+	width: auto;
+	float: none;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+	}
+
+}
+
 .container {
   padding-left: 20px;
   padding-right: 20px;
   max-width: 1140px;
-  min-width: 755px;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
 }
 
+.row {
+  min-width: 0;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 .sidebar {
   float: left;
+  clear: left;
   width: 15.8%;
   position: relative;
   z-index: 2;
-}
-
-.grid {
-  float: left;
-  position: relative;
-  margin-bottom: 20px;
-}
-
-@media all and (min-width: 768px) {
-  .grid {
-    width: 80%;
-    min-height: 600px;
-    border: solid 1px $subtle;
-    border-top-width: 0;
-    padding: 10px 1.9%;
-    @include shadow(20px, #F5F5F5);
+  img {
+    display: block;
   }
 }
 
-@media all and (max-width: 767px) {
+.grid {
+  background: #FFF;
+  float: left;
+}
+
+@media all and (min-width: 600px) {
+  .grid {
+    width: 80%;
+    min-height: 660px;
+    margin-bottom: 20px;
+    border: solid 1px $subtle;
+    border-top-width: 0;
+    padding: 10px 1.9%;
+    @include shadow(30px, $very-subtle);
+  }
+  nav {
+    text-align: right;
+    a {
+      display: block;
+      padding-right: 15px;
+    }
+  }
+}
+
+@media all and (max-width: 599px) {
   .container {
     min-width: 0;
     padding: 0;
   }
   .sidebar {
-    display: none; 
+    float: none;
+    width: 100%;
+    padding: 10px 20px;
+  }
+  nav {
+    a {
+      float: left;
+      margin-right: 10px;
+    }
   }
   .grid {
+    float: left;
     padding: 0;
     margin-top: 10px;
   }

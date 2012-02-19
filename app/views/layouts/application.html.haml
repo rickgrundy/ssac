@@ -8,23 +8,20 @@
   %body
     .container
       .sidebar
-        %h1=link_to "Sydney Sub Aqua Club - BSAC 2373", root_path
-        =link_to image_tag("banner.jpg", alt: "Sydney Sub Aqua Club - BSAC 2373"), root_path
+        .banner
+          %h1=link_to "Sydney Sub Aqua Club - BSAC 2373", root_path
+          =link_to image_tag("banner.jpg", alt: "Sydney Sub Aqua Club - BSAC 2373"), root_path
+        %nav
+          =link_to "About the Club", "#"
+          =link_to "Membership", "#"
+          =link_to "Trip Reports", "#"
+          =link_to "Planned Dives", "#"
+          =link_to "Files", "#"
+      
       .grid
         .row
-          .twelvecol
-            =render partial: "layouts/header"
-        .row
-          .eightcol
-
-            Ham hock beef ribs bacon pork chop. Venison jerky meatloaf, chicken pork beef chuck. Pork belly tail shank ham hock bacon prosciutto, capicola ground round flank kielbasa short ribs sirloin. Pork chop rump pig tri-tip venison ground round.
-
-            Pastrami sirloin boudin ball tip ribeye hamburger, capicola meatloaf. Tongue pork chop prosciutto turducken pancetta. T-bone turkey leberkas pork belly drumstick, pork shank kielbasa beef ribs ham hock fatback tri-tip. Tenderloin frankfurter ball tip, drumstick fatback tongue rump filet mignon meatloaf turkey boudin kielbasa andouille shankle beef ribs. Shoulder tongue pastrami, turducken hamburger ball tip meatball ground round rump spare ribs turkey filet mignon salami. Boudin tenderloin prosciutto, short loin ground round pancetta meatball corned beef kielbasa. Pork loin meatloaf short ribs shoulder corned beef jerky, shankle biltong venison pork belly capicola fatback cow.
-
-            Pastrami ball tip ham chicken. Sausage ball tip tri-tip flank pork loin. Beef ribeye kielbasa fatback shoulder hamburger pork, cow filet mignon sausage jerky drumstick ham shank frankfurter. Chuck frankfurter beef tail shoulder, pork chop tenderloin kielbasa prosciutto flank fatback meatball pork loin swine.
-
-            Capicola ham hock brisket, pork belly pork chop pork meatloaf t-bone frankfurter pancetta beef boudin corned beef jowl. T-bone bresaola salami drumstick, shank ham sausage pork loin cow ball tip tenderloin jowl chicken. Boudin chuck ground round bacon, pig pastrami tail spare ribs. Ham hock capicola pig, venison spare ribs andouille jowl short loin boudin tri-tip ribeye turducken corned beef pork. Pork spare ribs short loin capicola ribeye, fatback pork chop sirloin sausage meatball short ribs.
-
-            =yield
-          .fourcol.last
-            Capicola ham hock brisket, pork belly pork chop pork meatloaf t-bone frankfurter pancetta beef boudin corned beef jowl. T-bone bresaola salami drumstick, shank ham sausage pork loin cow ball tip tenderloin jowl chicken. Boudin chuck ground round bacon, pig pastrami tail spare ribs. Ham hock capicola pig, venison spare ribs andouille jowl short loin boudin tri-tip ribeye turducken corned beef pork. Pork spare ribs short loin capicola ribeye, fatback pork chop sirloin sausage meatball short ribs.
+          .ninecol
+            %h2=content_for :title
+          .threecol.last
+            =render partial: "layouts/account"
+        .row=yield

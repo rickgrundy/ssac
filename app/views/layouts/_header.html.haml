@@ -1,8 +1,0 @@
--if current_user
-  =link_to "Logout", destroy_user_session_path, method: 'delete'
-  =link_to "My Account", edit_user_registration_path
--else
-  =link_to "Members' Login", new_user_session_path
-  
-=alert
-=notice  

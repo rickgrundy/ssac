@@ -1,0 +1,18 @@
+@media all and (max-width: 600px) {
+   body {
+     font-size: 14px;
+   }
+   .grid {
+     margin-bottom: 40px;
+   }
+   .account {
+     position: absolute;
+     bottom: 20px;
+   }
+   h3, h4, h5 {
+     margin-top: 20px;
+   }
+   .sidebar .banner {
+     display: none;
+   }
+}
