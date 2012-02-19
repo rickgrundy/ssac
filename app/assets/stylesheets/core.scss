@@ -164,7 +164,7 @@ dl {
     font-size: 1.2em;
   }
   .read_more {
-    float: right;
-    margin-top: -$spacing;
+    display: block;
+    text-align: right;
   }
 }

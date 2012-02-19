@@ -121,14 +121,16 @@ img {
   min-width: 0;
   margin: 0 auto;
   overflow: hidden;
-  padding-bottom: $spacing;
-  margin-bottom: $spacing;
+  padding: $spacing 0;
   border-bottom: solid 1px $subtle
 }
 .row.header, .row.last {
   border-bottom: 0;
-  margin-bottom: 0;
+  margin-bottom: $spacing;
   padding-bottom: 0;
+}
+.row .row:nth-child(1) {
+  padding-top: 0;
 }
 
 .sidebar {
@@ -156,12 +158,6 @@ img {
     border-top-width: 0;
     padding: 10px 1.9% 0;
     @include shadow(30px, $very-subtle);
-  }
-  .row {
-    margin-bottom: 20px;
-  }
-  .row.first {
-    margin-bottom: 10px;
   }
   nav {
     text-align: right;

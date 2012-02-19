@@ -4,7 +4,7 @@
   .row.last
     .tencol
       -@trip_reports.each do |report|
-        .row{class: report == @trip_reports.last ? ".last" : ""}
+        .row{class: report == @trip_reports.last ? "last" : ""}
           =render partial: "snippet", locals: {report: report}
     .twocol.last
       .years
