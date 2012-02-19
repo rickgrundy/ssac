@@ -1,5 +1,7 @@
 $spacing: 10px;
 
+$text: #555;
+$link: #07C;
 $white: #FFF;
 $subtle: #DDD;
 
@@ -9,7 +11,7 @@ $subtle: #DDD;
   border-radius: $radius;
 }
 
-@mixin shadow($size: $spacing, $colour: $shadow) {
+@mixin shadow($size: $spacing, $colour: $subtle) {
   -moz-box-shadow: 0 0 $size 0 $colour;
   -webkit-box-shadow: 0 0 $size 0 $colour;
   box-shadow: 0 0 $size 0 $colour;

@@ -4,6 +4,18 @@
 body {
   font-family: 'Lato', 'Arial', sans-serif;
   font-size: 16px;
+  color: $text;
+  line-height: 1.5em;
+}
+
+@media all and (max-width: 767px) {
+   body {
+     font-size: 14px;
+   } 
+}
+
+.grid {
+  background: $white;
 }
 
 h2 {
@@ -21,4 +33,9 @@ input, select, textarea {
 label {
   display: block;
   padding: $spacing 0 2px;
+}
+
+a, a:visited {
+  color: $link;
+  text-decoration: underline;
 }

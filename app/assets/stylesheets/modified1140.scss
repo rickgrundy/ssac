@@ -1,0 +1,49 @@
+@import "global";
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1140px;
+  min-width: 755px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.sidebar {
+  float: left;
+  width: 15.8%;
+  position: relative;
+  z-index: 2;
+}
+
+.grid {
+  float: left;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+@media all and (min-width: 768px) {
+  .grid {
+    width: 80%;
+    min-height: 600px;
+    border: solid 1px $subtle;
+    border-top-width: 0;
+    padding: 10px 1.9%;
+    @include shadow(20px, #F5F5F5);
+  }
+}
+
+@media all and (max-width: 767px) {
+  .container {
+    min-width: 0;
+    padding: 0;
+  }
+  .sidebar {
+    display: none; 
+  }
+  .grid {
+    padding: 0;
+    margin-top: 10px;
+  }
+}
