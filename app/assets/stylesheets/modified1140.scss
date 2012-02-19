@@ -149,6 +149,9 @@ img {
     padding: 10px 1.9%;
     @include shadow(30px, $very-subtle);
   }
+  .row {
+    margin-bottom: 20px;
+  }
   nav {
     text-align: right;
     a {

@@ -3,7 +3,7 @@ Ssac::Application.routes.draw do
 
   root :to => 'homepage#index'
   
-  resource :info do
+  resource :info, controller: "info" do
     get 'club'
     get 'membership'
   end
