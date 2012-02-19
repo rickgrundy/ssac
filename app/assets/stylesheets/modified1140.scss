@@ -127,8 +127,11 @@ img {
 }
 .row.header, .row.last {
   border-bottom: 0;
-  margin-bottom: $spacing;
+  margin-bottom: 0;
   padding-bottom: 0;
+}
+.row.last {
+  margin-bottom: $spacing;
 }
 .row .row:nth-child(1) {
   padding-top: 0;
