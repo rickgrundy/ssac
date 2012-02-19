@@ -1,0 +1,7 @@
+-content_for :title, "Trip Reports"
+
+.trip_reports
+  .row.last
+    .twelvecol
+      -@trip_reports.each do |report|
+        .report=markdown(report.report)
