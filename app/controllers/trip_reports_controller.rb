@@ -10,4 +10,8 @@ class TripReportsController < ApplicationController
     end
     @years = Date.today.year.downto(TripReport::EARLIEST_YEAR)
   end
+  
+  def show
+    @trip_report = TripReport.find(params[:id])
+  end
 end

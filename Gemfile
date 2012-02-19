@@ -4,6 +4,7 @@ gem 'rails', '3.2.1'
 gem 'jquery-rails'
 gem 'haml', '3.1.4'
 gem 'devise'
+gem 'friendly_id', '~> 4.0.0'
 
 gem 'pg'
 

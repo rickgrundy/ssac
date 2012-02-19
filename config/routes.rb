@@ -12,4 +12,7 @@ Ssac::Application.routes.draw do
   resources :trip_reports
   resources :photos
   resources :files
+  
+  # Legacy URLs from previous
+  match "/trip_report/:slug" => redirect("/trip_reports/%{slug}")
 end

@@ -1,0 +1,42 @@
+-content_for :title, "Trip Report - #{@trip_report.destination}"
+.tripreport
+  .row
+    .twelvecol
+      %h5.byline=@trip_report.byline
+
+  .row
+    .threecol
+      %figure
+        %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/245.jpg?1314682226"}
+        %figcaption Photo by Rick Grundy
+    .threecol
+      %figure          
+        %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/244.jpg?1314682226"}
+        %figcaption Photo by Rick Grundy
+    .threecol    
+      %figure          
+        %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/243.jpg?1314682226"}
+        %figcaption Photo by Rick Grundy
+    .threecol.last    
+      %figure                    
+        %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/245.jpg?1314682226"}
+        %figcaption Photo by Rick Grundy
+
+  .row
+    .twelvecol
+      .markdown=markdown(@trip_report.report)
+
+  -2.times do
+    .row
+      .threecol
+        %figure
+          %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/245.jpg?1314682226"}
+      .threecol
+        %figure          
+          %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/244.jpg?1314682226"}
+      .threecol    
+        %figure          
+          %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/243.jpg?1314682226"}
+      .threecol.last    
+        %figure                    
+          %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/245.jpg?1314682226"}   

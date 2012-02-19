@@ -117,13 +117,12 @@ form {
 }
 
 figure {
-  margin-bottom: $spacing;
   img {
     width: 100%;
   }
   figcaption {
     text-align: center;
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 }
 
@@ -154,6 +153,13 @@ dl {
   }
 }
 
+.homepage {
+  .gallery {
+    figure {
+      margin-bottom: $spacing;
+    }
+  }
+}
 
 
 .snippet {
