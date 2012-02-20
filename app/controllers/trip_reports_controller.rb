@@ -11,6 +11,7 @@ class TripReportsController < ApplicationController
   end
   
   def show
-    @trip_report = TripReport.find(params[:id])
+    @trip_report = TripReport.includes(:user).find(params[:id])
+    @photos = @trip_report.photos.includes(:user).to_a
   end
 end

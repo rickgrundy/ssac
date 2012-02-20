@@ -1,0 +1,7 @@
+=content_for :title, "A Photo from #{@photo.trip_report.destination}"
+
+.row
+  .twelvecol.last
+    %h5.byline=@photo.byline
+    %p=link_to image_tag(@photo.image.url(:full)), trip_report_path(@photo.trip_report) 
+    =link_to "Back to #{@photo.trip_report.destination} Trip Report", trip_report_path(@photo.trip_report)

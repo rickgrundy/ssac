@@ -1,44 +1,17 @@
 -content_for :title, @trip_report.destination
 .tripreport
-  .row
+  .row.last
     .tencol
       %h5.byline=@trip_report.byline
 
-      .row
-        .threecol
-          %figure
-            %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/245.jpg?1314682226"}
-            %figcaption Photo by Rick Grundy
-        .threecol
-          %figure          
-            %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/244.jpg?1314682226"}
-            %figcaption Photo by Rick Grundy
-        .threecol    
-          %figure          
-            %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/243.jpg?1314682226"}
-            %figcaption Photo by Rick Grundy
-        .threecol.last    
-          %figure                    
-            %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/245.jpg?1314682226"}
-            %figcaption Photo by Rick Grundy
-
-      .row
+      -if @photos.present?
+        =render partial: "photo_row", locals: {photos: @trip_report.photos.first(4).reject(&:nil?)}
+      .row{class: @photos.size <= 4 ? "last" : ""}
         .twelvecol
           .markdown=markdown(@trip_report.report)
 
-      -2.times do
-        .row
-          .threecol
-            %figure
-              %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/245.jpg?1314682226"}
-          .threecol
-            %figure          
-              %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/244.jpg?1314682226"}
-          .threecol    
-            %figure          
-              %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/243.jpg?1314682226"}
-          .threecol.last    
-            %figure                    
-              %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/245.jpg?1314682226"}   
+      -if @photos.size > 4
+        -@photos.from(4).in_groups_of(4) do |photos|
+          =render partial: "photo_row", locals: {photos: photos.reject(&:nil?)}
               
     .twocol.last=render partial: "years"

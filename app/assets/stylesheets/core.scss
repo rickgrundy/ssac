@@ -57,6 +57,10 @@ h5 {
   margin-bottom: $spacing;
 }
 
+.byline {
+  margin-bottom: $spacing*2;
+}
+
 img {
   display: block;
 }
@@ -127,6 +131,7 @@ figure {
   figcaption {
     text-align: center;
     font-size: 0.8em;
+    line-height: 1.2em;
   }
 }
 
@@ -175,5 +180,10 @@ dl {
   .read_more {
     display: block;
     text-align: right;
+  }
+  img {
+    width: auto;
+    float: left;
+    margin: $spacing/2 $spacing 0 0;
   }
 }

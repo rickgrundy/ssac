@@ -6,7 +6,7 @@
       -@items.each do |item|
         .row{class: item == @items.last ? "last" : ""}
           -if item.class == TripReport
-            =render partial: 'trip_reports/snippet', locals: {trip_report: item, in_context: false, truncate: 500}
+            =render partial: 'trip_reports/snippet', locals: {trip_report: item, in_context: false, truncate: 600}
     .fourcol.last
       .row
         %h3 Finding Us
@@ -25,7 +25,7 @@
         .gallery
           -@photos.each do |photo|
             %figure
-              =image_tag photo.image.url(:homepage), alt: "A photo from #{photo.trip_report.destination}"
+              =link_to image_tag(photo.image.url(:homepage), alt: "A photo from #{photo.trip_report.destination}"), trip_report_path(photo.trip_report)
               %figcaption 
                 From 
                 =link_to photo.trip_report.destination, trip_report_path(photo.trip_report)

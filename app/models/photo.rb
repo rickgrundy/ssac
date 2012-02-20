@@ -1,7 +1,7 @@
 class Photo < ActiveRecord::Base
   belongs_to :user
   belongs_to :trip_report
-  scope :random, order: "RANDOM()"
+  default_scope order: "RANDOM()"
   
   has_attached_file :image, {
     :whiny => true,
@@ -18,4 +18,8 @@ class Photo < ActiveRecord::Base
       :homepage => "280x180#"
     }
   }
+  
+  def byline
+    "Taken by #{user.name} on #{created_at.strftime('%d %B %Y')}"
+  end
 end

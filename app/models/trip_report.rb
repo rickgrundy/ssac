@@ -2,7 +2,7 @@ class TripReport < ActiveRecord::Base
   belongs_to :user
   has_many :photos
   validates_presence_of :date, :destination, :report
-  scope :recent,  order: "date DESC"
+  scope :recent, order: "date DESC"
   
   extend FriendlyId
   friendly_id :destination_and_date, use: :slugged
@@ -11,6 +11,10 @@ class TripReport < ActiveRecord::Base
   
   def byline
     "#{user.name} reporting on #{date.strftime('%d %B %Y')}"
+  end
+  
+  def random_photo
+    photos.first
   end
   
   private
