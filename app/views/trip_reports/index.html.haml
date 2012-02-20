@@ -3,6 +3,8 @@
 .trip_reports
   .row.last
     .tencol
+      -if current_user
+        %h4=link_to "Write a new trip report", new_trip_report_path
       -@trip_reports.each do |trip_report|
         .row{class: trip_report == @trip_reports.last ? "last" : ""}
           =render partial: "snippet", locals: {trip_report: trip_report, in_context: true, truncate: 1000}

@@ -74,9 +74,12 @@ a, a:visited {
 }
 
 .flash {
+  font-weight: 100;
   width: auto;
-  padding: $spacing/2;
-  font-weight: bold;
+  padding: 0 $spacing;
+  font-size: 2em;
+  line-height: 2em;
+  margin-bottom: $spacing;
 }
 .error, .alert {
   color: $error;
@@ -94,6 +97,13 @@ form {
     @include recessed();
     padding: $spacing/2;
     margin-bottom: $spacing;
+    width: 50%;
+  }
+  
+  textarea {
+    width: 98%;
+    height: 30em;
+    padding: 1%;
   }
   
   input[type='checkbox'], input[type='radio'] {
@@ -115,11 +125,17 @@ form {
   
   #error_explanation {
     color: $error;
+    margin-bottom: $spacing;
     h2 {  
       font-size: 1.6em;
       color: $error;
       margin-bottom: $spacing/2;
     }
+  }
+  
+  .date {
+    font-size: inherit;
+    text-align: left;
   }
 }
 
@@ -134,6 +150,12 @@ figure {
   }
 }
 
+ul {
+  padding-left: 1.5em;
+  li {
+    list-style-type: disc;
+  }
+}
 ol {
   padding-left: 2em;
   li {
