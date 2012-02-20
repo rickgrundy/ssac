@@ -73,8 +73,8 @@ a, a:visited {
   font-weight: 100;
   width: auto;
   padding: 0 $spacing;
-  font-size: 2em;
-  line-height: 2em;
+  font-size: 1.5em;
+  line-height: 1.5em;
   margin-bottom: $spacing;
 }
 .error, .alert {
@@ -87,6 +87,8 @@ a, a:visited {
 }
 
 form {
+  margin-bottom: $spacing*6;
+  
   input, select, textarea {
     display: block;
     border: solid 1px $subtle;
@@ -104,10 +106,12 @@ form {
   
   input[type='checkbox'], input[type='radio'] {
     display: inline;
+    width: auto;
   }
   
   input[type='submit'] {
     cursor: pointer;
+    width: auto;
   }
 
   span.note {
