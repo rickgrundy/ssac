@@ -4,9 +4,9 @@ class TripReportsController < ApplicationController
   def index
     if params[:year]
       @year = params[:year].to_i
-      @trip_reports = TripReport.order("date ASC").where("date between ? and ?", Date.new(@year), Date.new(@year + 1))
+      @trip_reports = TripReport.includes(:user, :photos).order("date ASC").where("date between ? and ?", Date.new(@year), Date.new(@year + 1))
     else
-      @trip_reports = TripReport.recent.where("date > ?", Date.today - 1.years)
+      @trip_reports = TripReport.includes(:user, :photos).recent.where("date > ?", Date.today - 1.years)
     end
   end
   

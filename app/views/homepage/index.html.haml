@@ -23,15 +23,9 @@
       .row.last
         %h3 Our Photos
         .gallery
-          %figure
-            %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/245.jpg?1314682226"}
-            %figcaption From <a href="#">Somewhere</a>
-          %figure          
-            %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/244.jpg?1314682226"}
-            %figcaption From <a href="#">Somewhere</a>
-          %figure          
-            %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/243.jpg?1314682226"}
-            %figcaption From <a href="#">Somewhere</a>          
-          %figure                    
-            %img{src: "http://s3.amazonaws.com/RickGrundy.com-production/images/full/245.jpg?1314682226"}
-            %figcaption From <a href="#">Somewhere</a>          
+          -@photos.each do |photo|
+            %figure
+              =image_tag photo.image.url(:homepage), alt: "A photo from #{photo.trip_report.destination}"
+              %figcaption 
+                From 
+                =link_to photo.trip_report.destination, trip_report_path(photo.trip_report)
