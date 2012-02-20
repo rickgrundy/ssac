@@ -3,6 +3,8 @@ class Photo < ActiveRecord::Base
   belongs_to :trip_report
   default_scope order: "RANDOM()"
   
+  validates_attachment_presence :image
+  
   has_attached_file :image, {
     :whiny => true,
     :storage => :s3,

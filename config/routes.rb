@@ -11,8 +11,9 @@ Ssac::Application.routes.draw do
   resources :planned_dives
   resources :trip_reports
   resources :photos
-  resources :files
+  resources :documents
   
   # Legacy URLs from previous
   match "/trip_report/:slug" => redirect("/trip_reports/%{slug}")
+  match "/files" => redirect("/documents")
 end

@@ -11,9 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120220132548) do
+ActiveRecord::Schema.define(:version => 20120220162730) do
 
-  create_table "files", :force => true do |t|
+  create_table "documents", :force => true do |t|
     t.integer  "user_id"
     t.string   "document_file_name"
     t.string   "document_content_type"

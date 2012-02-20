@@ -109,6 +109,12 @@ form {
     width: auto;
   }
   
+  input[type='file'] {
+    width: auto;
+    padding: default;
+    background: transparent;
+  }
+  
   input[type='submit'] {
     cursor: pointer;
     width: auto;
@@ -218,4 +224,11 @@ dl {
 
 .photo {
   text-align: center;
+}
+
+.files {
+  a {
+    display: block;
+    margin: $spacing/2;
+  }
 }

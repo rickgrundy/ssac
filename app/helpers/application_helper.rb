@@ -1,7 +1,7 @@
 module ApplicationHelper
   def committee_info_path
     club_info_path(anchor: "committee")
-  end  
+  end
   
   def markdown(text, trunc=false)
     text = text.truncate(trunc) if trunc

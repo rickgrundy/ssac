@@ -1,0 +1,12 @@
+-content_for :title, "SSAC Files (Members Only)"
+
+.row.last
+  .sevencol.files
+    -@documents.each do |document|
+      =link_to document.document_file_name, document.document.url
+  .fivecol.last
+    %h3 Upload a New File
+    =form_for @document, multipart: true do |f|
+      =errors_for(@document)
+      =f.file_field :document
+      =f.submit "Upload File"
