@@ -1,0 +1,33 @@
+-content_for :title, "Planned Dives"
+
+.trip_reports
+  .row.last
+    .eightcol
+      -@planned_dives.each do |planned_dive|
+        .row{class: planned_dive == @planned_dives.last ? "last" : ""}
+          =render partial: "snippet", locals: {planned_dive: planned_dive, in_context: true, truncate: false}
+    .fourcol.last
+      .instructions
+        %h3 Organising a Dive 
+        %p So you want to run a club dive? Thanks very much, it's people like you that make the club happen.
+        %p
+          The advantage of arranging dives is that your type of diving gets done.  The general rule is that anyone can organise a club dive - if you are a less experienced diver you can always find a more experienced diver to help you. Here's what to do: 
+
+        %p
+          %ol
+            %li 
+              Discuss your idea with the club Diving Officer,
+              = mail_to 'divingofficer@sydneysubaquaclub.com', Committee.diving_officer
+            %li 
+              If 
+              = Committee.diving_officer.split.first
+              says yes then go ahead and advertise it using the 
+              = link_to 'dive planner', new_planned_dive_path
+              on the club website.
+            %li If you are a less experienced diver, new to the area or have never organised a club dive before, it may be best if you had a co-pilot.
+            %li If you are not sure, please discuss qualifications and depth limits with the Diving Officer.
+            %li For dives where planned decompression is going to happen, discuss your plans with the DO before the dive.
+            %li For shore dives, please make sure you have got the club oxygen set and the club medical kit.
+            %li After the dive, please write a report on the website and also try and ensure that the website is updated with photographs and/or gossip.
+            %li Thank everyone that helped ... lots.
+            %li Be extremely smug.  It's people like you that make the club happen

@@ -3,8 +3,8 @@
 .trip_reports
   .row.last
     .tencol
-      -@trip_reports.each do |report|
-        .row{class: report == @trip_reports.last ? "last" : ""}
-          =render partial: "snippet", locals: {trip_report: report, in_context: true, truncate: 1000}
+      -@trip_reports.each do |trip_report|
+        .row{class: trip_report == @trip_reports.last ? "last" : ""}
+          =render partial: "snippet", locals: {trip_report: trip_report, in_context: true, truncate: 1000}
     .twocol.last
       =render partial: "years"
