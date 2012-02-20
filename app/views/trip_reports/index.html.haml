@@ -1,4 +1,4 @@
--content_for :title, "Trip Reports#{" from #{@year}" if @year}"
+-content_for :title, @year ? "Trip Reports from #{@year}" : "Recent Trip Reports"
 
 .trip_reports
   .row.last
