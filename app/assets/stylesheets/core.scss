@@ -60,10 +60,6 @@ h5 {
   margin-bottom: $spacing*2;
 }
 
-img {
-  display: block;
-}
-
 p {
   margin: 0 0 $spacing;
 }
@@ -140,11 +136,8 @@ form {
 }
 
 figure {
-  img {
-    width: 100%;
-  }
+  text-align: center;
   figcaption {
-    text-align: center;
     font-size: 0.8em;
     line-height: 1.2em;
   }
@@ -207,4 +200,18 @@ dl {
     float: left;
     margin: $spacing/2 $spacing 0 0;
   }
+}
+
+.markdown {
+  h2 {
+    font-size: 2em;
+    margin-bottom: $spacing; 
+  }
+  h3 {
+    font-size: 1.6em;
+  }
+}
+
+.photo {
+  text-align: center;
 }

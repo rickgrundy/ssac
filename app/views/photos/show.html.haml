@@ -3,5 +3,6 @@
 .row
   .twelvecol.last
     %h5.byline=@photo.byline
-    %p=link_to image_tag(@photo.image.url(:full)), trip_report_path(@photo.trip_report) 
-    =link_to "Back to the #{@photo.trip_report.destination} Trip Report", trip_report_path(@photo.trip_report)
+    .photo
+      %p=link_to image_tag(@photo.image.url(:full)), trip_report_path(@photo.trip_report) 
+      %p=link_to "Back to the #{@photo.trip_report.destination} Trip Report", trip_report_path(@photo.trip_report)
