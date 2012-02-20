@@ -1,4 +1,5 @@
 class Document < ActiveRecord::Base
+  belongs_to :user
   validates_attachment_presence :document
     
   has_attached_file :document, {

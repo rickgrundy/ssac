@@ -8,6 +8,7 @@ class DocumentsController < ApplicationController
   
   def create
     @document = Document.new(params[:document])
+    @document.user = current_user
     if @document.save
       flash[:notice] = "Your file uploaded successfully."
       redirect_to documents_path
