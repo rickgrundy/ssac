@@ -14,6 +14,9 @@
 
   <p><%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %></p>
+  
+  <p><%= f.label :ssac_secret_question %> <span class="note">(ask anyone on the <%= link_to "committee", committee_info_path -%>)</span>
+  <%= f.password_field :ssac_secret_question %></p>
 
   <p><%= f.submit "Sign up" %></p>
 <% end %>
