@@ -1,8 +1,9 @@
 @import "global";
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300);
 
 body {
-  font-family: 'Lato', 'Helvetica', 'Verdana', sans-serif;
+  font-family: 'Lato', 'Gill Sans', 'Gill Sans MT', sans-serif;
+  font-weight: 300;
   font-size: 15px;
   color: $text;
   line-height: 1.4em;
@@ -24,8 +25,8 @@ nav {
 }
 
 h1, h2, h3, h4, h5 {
-  line-height: 1em;
   font-weight: 100;
+  line-height: 1em;
 }
 
 h1, h2, h3 {
