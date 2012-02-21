@@ -8,10 +8,4 @@ class User < ActiveRecord::Base
   def can_edit?(record)
     record.user == self || self.administrator
   end
-  
-  private
-  
-  def ssac_secret_question
-    
-  end
 end

@@ -1,11 +1,9 @@
 .trip_report.snippet
-  %h3=link_to "#{'Trip Report - ' unless in_context}#{trip_report.destination}", trip_report_path(trip_report)
-    
-  -if in_context
-    %h5.byline=trip_report.byline
+  %h3=link_to "#{'Trip Report - ' if homepage}#{trip_report.destination}", trip_report_path(trip_report)
+  %h5.byline=byline(trip_report)
   
   .markdown
     -if trip_report.photos.present?
-      =link_to image_tag(trip_report.random_photo.image.url(in_context ? :homepage : :thumbnail), alt: "A photo from #{trip_report.destination}"), trip_report_path(trip_report)
+      =link_to image_tag(trip_report.random_photo.image.url(homepage ? :homepage : :thumbnail), alt: "A photo from #{trip_report.destination}"), trip_report_path(trip_report)
     =markdown(trip_report.report, truncate)
   .read_more=link_to "…Read more", trip_report_path(trip_report)

@@ -232,3 +232,15 @@ dl {
     margin: $spacing/2;
   }
 }
+
+.planned_dive .divers {
+  p {
+    width: 33%;
+    float: left;
+    height: 1.5em;
+    overflow: hidden;
+  }
+  ol, ul, li {
+    display: inline;
+  }  
+}

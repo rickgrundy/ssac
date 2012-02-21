@@ -3,7 +3,7 @@
   .row.last
     .tencol
       %h5.byline
-        =@trip_report.byline
+        =byline(@trip_report)
         -if current_user && current_user.can_edit?(@trip_report)
           =link_to "Edit this trip report", edit_trip_report_path(@trip_report)
           

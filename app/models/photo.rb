@@ -20,8 +20,4 @@ class Photo < ActiveRecord::Base
       :homepage => "280x180#"
     }
   }
-  
-  def byline
-    "Taken by #{user.name} on #{created_at.strftime('%d %B %Y')}"
-  end
 end

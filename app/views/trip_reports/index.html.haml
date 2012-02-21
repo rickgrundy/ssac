@@ -7,6 +7,6 @@
         %h4=link_to "Write a new trip report", new_trip_report_path
       -@trip_reports.each do |trip_report|
         .row{class: trip_report == @trip_reports.last ? "last" : ""}
-          =render partial: "snippet", locals: {trip_report: trip_report, in_context: true, truncate: 1000}
+          =render partial: "snippet", locals: {trip_report: trip_report, homepage: false, truncate: 1000}
     .twocol.last
       =render partial: "years"

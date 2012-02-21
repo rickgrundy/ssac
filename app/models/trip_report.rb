@@ -8,11 +8,7 @@ class TripReport < ActiveRecord::Base
   friendly_id :destination_and_date, use: :slugged
   
   EARLIEST_YEAR = 2006
-  
-  def byline
-    "#{user.name} reporting on #{date.strftime('%d %B %Y')}"
-  end
-  
+    
   def random_photo
     photos.first
   end

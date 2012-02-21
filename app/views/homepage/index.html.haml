@@ -6,7 +6,9 @@
       -@items.each do |item|
         .row{class: item == @items.last ? "last" : ""}
           -if item.class == TripReport
-            =render partial: 'trip_reports/snippet', locals: {trip_report: item, in_context: false, truncate: 600}
+            =render partial: 'trip_reports/snippet', locals: {trip_report: item, homepage: true, truncate: 600}
+          -if item.class == PlannedDive
+            =render partial: 'planned_dives/snippet', locals: {planned_dive: item, homepage: true, truncate: 600}
     .fourcol.last
       .row
         %h3 Finding Us

@@ -1,1 +1,13 @@
-PLANNED DIVE GOES HERE
+.planned_dive.snippet
+  %h3=link_to "#{'Planned Dive - ' if homepage}#{planned_dive.destination}", planned_dive_path(planned_dive)
+    
+  %h5.byline=byline(planned_dive)
+  
+  .markdown
+    =markdown(planned_dive.description, truncate)
+    
+  %h4 Who's Coming?
+  .markdown.divers
+    =markdown(planned_dive.divers, truncate)
+    
+  .read_more=link_to "…Read more and sign up", planned_dive_path(planned_dive)
