@@ -1,0 +1,13 @@
+-content_for :title, "Your Photos from #{@trip_report.destination}"
+
+.row.last
+  .eightcol
+    =form_tag upload_photos_trip_report_path(@trip_report), {:multipart => true} do
+      - 5.times do |i|
+        =file_field_tag "photos[#{i}]"
+      =submit_tag "Upload Photos"
+      
+  .fourcol.last
+    %h3 Saving Bandwidth
+    %p Photos will be magically resized to fit inside an 912x620 pixel frame. 
+    %p You can save yourself some bandwidth by resizing massive files to something close to this, but don't shrink them any smaller or you'll lose resolution and quality.      

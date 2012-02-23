@@ -3,8 +3,6 @@
 .planned_dive
   .row.last
     .eightcol
-      -if current_user && current_user.can_edit?(@planned_dive)
-        %h4=link_to "Edit this planned #{@planned_dive.event_type.downcase}", edit_planned_dive_path(@planned_dive)
       %h5.byline=byline(@planned_dive)
 
       .row.markdown
@@ -33,3 +31,7 @@
         .row
           %h4 Minimum Diver Grade
           =@planned_dive.suitable_for
+          
+      -if current_user && current_user.can_edit?(@planned_dive)
+        .row.last
+          %h4=link_to "Edit this planned #{@planned_dive.event_type.downcase}", edit_planned_dive_path(@planned_dive)          

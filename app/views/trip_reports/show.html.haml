@@ -3,10 +3,7 @@
 .tripreport
   .row.last
     .tencol
-      -if current_user && current_user.can_edit?(@trip_report)
-        %h4=link_to "Edit this trip report", edit_trip_report_path(@trip_report)    
       %h5.byline=byline(@trip_report)
-          
 
       -if @photos.present?
         =render partial: "photo_row", locals: {photos: @photos.first(4).reject(&:nil?)}
@@ -17,5 +14,13 @@
       -if @photos.size > 4
         -@photos.from(4).in_groups_of(4) do |photos|
           =render partial: "photo_row", locals: {photos: photos.reject(&:nil?)}
+          
+      -if current_user
+        .row.last
+          %h4
+            =link_to 'Add your photos from this trip', add_photos_trip_report_path(@trip_report)
+            -if current_user.can_edit?(@trip_report)
+              |
+              =link_to "Edit this trip report", edit_trip_report_path(@trip_report)
               
     .twocol.last=render partial: "years"

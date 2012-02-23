@@ -43,6 +43,10 @@ class TripReportsController < ApplicationController
     end
   end
   
+  def add_photos
+    @trip_report = TripReport.find(params[:id])
+  end
+  
   private
   
   def can_edit?

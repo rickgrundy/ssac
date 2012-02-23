@@ -9,7 +9,12 @@ Ssac::Application.routes.draw do
   end
   
   resources :planned_dives
-  resources :trip_reports
+  resources :trip_reports do
+    member do
+      get :add_photos
+      post :upload_photos
+    end
+  end
   resources :photos
   resources :documents
   
