@@ -83,7 +83,6 @@ max-width: 100%;
 /* Mobile */
 
 @media handheld, only screen and (max-width: 599px) {
-	
 	.row, body, .container {
 	width: 100%;
 	min-width: 0;
@@ -101,7 +100,6 @@ max-width: 100%;
 	padding-left: 20px;
 	padding-right: 20px;
 	}
-
 }
 
 .container {
@@ -178,6 +176,8 @@ max-width: 100%;
     padding: 10px 20px;
   }
   nav {
+    float: left;
+    width: 100%;
     a {
       float: left;
       margin-right: 10px;
@@ -187,5 +187,6 @@ max-width: 100%;
     float: left;
     padding: 0;
     margin-top: 10px;
+    width: 100%;
   }
 }

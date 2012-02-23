@@ -15,7 +15,6 @@
 //= require_tree .
 
 $(function() {
-   $("h1").hide(); 
    $(":date").dateinput({
      format: 'dd mmmm yyyy'
    });

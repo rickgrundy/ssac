@@ -1,14 +1,15 @@
-=form_for @trip_report do |f|
-
-  =errors_for(@trip_report)
+.row.last
+  .twelvecol
+    =form_for @trip_report do |f|
+      =errors_for(@trip_report)
   
-  =f.label :destination
-  =f.text_field :destination
+      =f.label :destination
+      =f.text_field :destination
   
-  =f.label :date
-  =f.text_field :date, type: "date"
+      =f.label :date
+      =f.text_field :date, type: "date"
   
-  =f.label :report
-  =f.text_area :report
+      =f.label :report
+      =f.text_area :report
   
-  =f.submit
+      =f.submit

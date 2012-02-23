@@ -23,6 +23,11 @@ nav {
   text-align: right;
 }
 
+h1 {
+  height: 0px;
+  overflow: hidden;
+}
+
 h1, h2, h3, h4, h5 {
   font-weight: 100;
   line-height: 1em;
@@ -89,17 +94,30 @@ a, a:visited {
 form {
   margin-bottom: $spacing*6;
   
-  input, select, textarea {
+  select {
+    display: block;
+    margin-bottom: $spacing;
+  }
+  
+  input, textarea {
     display: block;
     border: solid 1px $subtle;
     @include recessed();
     padding: $spacing/2;
     margin-bottom: $spacing;
-    width: 50%;
+    width: 70%;
+  }
+  
+  .fourcol input, .fourcol input[type='number'] {
+    width: 95%;
+  }
+  
+  .fourcol textarea {
+    height: 15em;
   }
   
   textarea {
-    width: 98%;
+    width: 95%;
     height: 30em;
     padding: 1%;
   }
@@ -115,9 +133,21 @@ form {
     background: transparent;
   }
   
+  input[type='date'], input[type='number'] {
+    width: 194px;
+  }
+  
   input[type='submit'] {
     cursor: pointer;
     width: auto;
+    margin-top: $spacing*2;
+    @include gradient($link);
+    color: #FFF;
+    font-size: 1.2em;
+    padding: $spacing;
+    &:active {
+      @include gradient(lighten($link, 20%));
+    }
   }
 
   span.note {
