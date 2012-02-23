@@ -27,7 +27,5 @@
         .gallery
           -@photos.each do |photo|
             %figure
-              =link_to image_tag(photo.image.url(:homepage), alt: "A photo from #{photo.trip_report.destination}"), trip_report_path(photo.trip_report)
-              %figcaption 
-                From 
-                =link_to photo.trip_report.destination, trip_report_path(photo.trip_report)
+              =link_to image_tag(photo.image.url(:homepage_variable), alt: "A photo from #{photo.trip_report.destination}"), trip_report_path(photo.trip_report)
+              %figcaption=link_to photo.trip_report.destination, trip_report_path(photo.trip_report)
