@@ -1,7 +1,7 @@
 class Photo < ActiveRecord::Base
   belongs_to :user
   belongs_to :trip_report
-  default_scope order: "RANDOM()"
+  scope :randomised, order: "RANDOM()"
   
   validates_attachment_presence :image
   

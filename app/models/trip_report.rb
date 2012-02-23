@@ -10,7 +10,7 @@ class TripReport < ActiveRecord::Base
   EARLIEST_YEAR = 2006
     
   def random_photo
-    photos.first
+    photos.randomised.first
   end
   
   private
