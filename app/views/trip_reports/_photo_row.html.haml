@@ -2,5 +2,5 @@
   -photos.each_with_index do |photo, i|
     .threecol{class: i == 3 ? "last" : ""}
       %figure
-        =link_to image_tag(photo.image.url(:thumbnail), alt: "A photo from #{@trip_report.destination}"), photo_path(photo)
+        =link_to image_tag(photo.image.url(:thumbnail_variable), alt: "A photo from #{@trip_report.destination}"), photo_path(photo)
         %figcaption="Photo by #{photo.user.name}"

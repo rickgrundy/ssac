@@ -16,10 +16,10 @@ class Photo < ActiveRecord::Base
     :path => "images/:style/:id.:extension",
     :styles => { 
       :full => "912x620>",
-      :thumbnail => "167x110>",      
-      :homepage => "280x180>",
-      :thumbnail_variable => "167x",
-      :homepage_variable => "280x"
+      :thumbnail => "167x110#",      
+      :homepage => "280x180#",
+      :thumbnail_variable => "167x110>",
+      :homepage_variable => "280x200>"
     }
   }
 end
