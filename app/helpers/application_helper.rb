@@ -21,7 +21,7 @@ module ApplicationHelper
     elsif record.is_a? TripReport
       return raw "#{record.user.name} reporting on #{record.date.strftime(DATE_FORMAT)}"
     elsif record.is_a? Photo
-      return raw "Taken by #{record.user.name} on #{created_at.strftime(DATE_FORMAT)}"
+      return raw "Taken by #{record.user.name} on #{record.created_at.strftime(DATE_FORMAT)}"
     end
     raise "Don't know how to create a byline for #{record.inspect}"
   end
