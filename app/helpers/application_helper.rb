@@ -16,8 +16,7 @@ module ApplicationHelper
   
   def byline(record)
     if record.is_a? PlannedDive
-      organiser_name = current_user ? mail_to(record.user.email, record.user.name) : record.user.name
-      return raw "#{record.start_date.strftime(DATE_FORMAT)}#{' to ' + record.end_date.strftime(DATE_FORMAT) if record.end_date} | Contact #{organiser_name}."
+      return raw "#{record.start_date.strftime(DATE_FORMAT)}#{' to ' + record.end_date.strftime(DATE_FORMAT) if record.end_date}."
     elsif record.is_a? TripReport
       return raw "#{record.user.name} reporting on #{record.date.strftime(DATE_FORMAT)}"
     elsif record.is_a? Photo

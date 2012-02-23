@@ -1,15 +1,15 @@
 -content_for :title, @trip_report.destination
+
 .tripreport
   .row.last
     .tencol
-      %h5.byline
-        =byline(@trip_report)
-        -if current_user && current_user.can_edit?(@trip_report)
-          =link_to "Edit this trip report", edit_trip_report_path(@trip_report)
+      -if current_user && current_user.can_edit?(@trip_report)
+        %h4=link_to "Edit this trip report", edit_trip_report_path(@trip_report)    
+      %h5.byline=byline(@trip_report)
           
 
       -if @photos.present?
-        =render partial: "photo_row", locals: {photos: @trip_report.photos.first(4).reject(&:nil?)}
+        =render partial: "photo_row", locals: {photos: @photos.first(4).reject(&:nil?)}
       .row{class: @photos.size <= 4 ? "last" : ""}
         .twelvecol
           .markdown=markdown(@trip_report.report)

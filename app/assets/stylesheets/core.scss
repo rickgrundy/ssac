@@ -233,14 +233,18 @@ dl {
   }
 }
 
-.planned_dive .divers {
-  p {
-    width: 33%;
+.planned_dive {
+  .divers {
+    width: 100%;
     float: left;
-    height: 1.5em;
-    overflow: hidden;
-  }
-  ol, ul, li {
-    display: inline;
-  }  
+    p {
+      width: 33%;
+      float: left;
+      height: 1.5em;
+      overflow: hidden;
+    }
+    ol, ul, li {
+      display: inline;
+    } 
+  } 
 }

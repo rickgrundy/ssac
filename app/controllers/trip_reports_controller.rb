@@ -13,7 +13,7 @@ class TripReportsController < ApplicationController
   
   def show
     @trip_report = TripReport.includes(:user).find(params[:id])
-    @photos = @trip_report.photos.includes(:user).randomised.to_a
+    @photos = @trip_report.photos.randomised.includes(:user).to_a
   end
   
   def new

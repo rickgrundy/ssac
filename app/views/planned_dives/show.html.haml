@@ -1,0 +1,35 @@
+-content_for :title, @planned_dive.destination
+
+.planned_dive
+  .row.last
+    .eightcol
+      -if current_user && current_user.can_edit?(@planned_dive)
+        %h4=link_to "Edit this planned #{@planned_dive.event_type.downcase}", edit_planned_dive_path(@planned_dive)
+      %h5.byline=byline(@planned_dive)
+
+      .row.markdown
+        =markdown(@planned_dive.description)
+
+      .row.last.divers    
+        %h4 Who's Coming?
+        .markdown
+          =markdown(@planned_dive.divers)
+                
+    .fourcol.last
+      .row
+        %h4 To Sign Up
+        -if current_user
+          =raw "Contact #{mail_to @planned_dive.user.email, @planned_dive.user.name}."
+        -else
+          =raw "Contact #{@planned_dive.user.name}"
+          %p=raw "(#{link_to "sign in", new_user_session_path} to see their email address)."
+
+      -if @planned_dive.meeting_place_and_time.present?
+        .row
+          %h4 Meeting Place & Time
+          =@planned_dive.meeting_place_and_time
+                          
+      -if @planned_dive.is_a_dive?
+        .row
+          %h4 Minimum Diver Grade
+          =@planned_dive.suitable_for
