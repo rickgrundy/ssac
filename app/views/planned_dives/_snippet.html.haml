@@ -5,10 +5,5 @@
   
   .markdown
     =markdown(planned_dive.description, truncate)
-    
-  .divers    
-    %h4 Who's Coming?
-    .markdown
-      =markdown(planned_dive.divers, truncate)
-    
-  .read_more=link_to "…Read more and sign up", planned_dive_path(planned_dive)
+        
+  .read_more=link_to "…Find out more and sign up", planned_dive_path(planned_dive)
