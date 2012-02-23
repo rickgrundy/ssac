@@ -3,8 +3,8 @@
 .row.last
   .eightcol
     =form_tag upload_photos_trip_report_path(@trip_report), {:multipart => true} do
-      - 5.times do |i|
-        =file_field_tag "photos[#{i}]"
+      -Photo::UPLOAD_COUNT.times do |i|
+        =file_field_tag "photo_#{i}"
       =submit_tag "Upload Photos"
       
   .fourcol.last

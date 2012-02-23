@@ -47,6 +47,19 @@ class TripReportsController < ApplicationController
     @trip_report = TripReport.find(params[:id])
   end
   
+  def upload_photos
+    @trip_report = TripReport.find(params[:id])
+    Photo::UPLOAD_COUNT.times do |i|
+      uploaded = params["photo_#{i}"]
+      break unless uploaded
+      photo = @trip_report.photos.create(user: current_user)
+      photo.image = uploaded
+      photo.save!
+    end
+    flash[:notice] = "Nice photos!"
+    redirect_to trip_report_path(@trip_report)    
+  end
+  
   private
   
   def can_edit?

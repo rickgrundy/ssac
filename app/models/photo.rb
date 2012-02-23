@@ -22,4 +22,6 @@ class Photo < ActiveRecord::Base
       :homepage_variable => "280x200>"
     }
   }
+  
+  UPLOAD_COUNT = 5
 end
