@@ -10,6 +10,10 @@ module ApplicationHelper
     raw Redcarpet.new(text).to_html
   end
   
+  def in_paragraphs(text)
+    raw text.split("\n").reject(&:blank?).map { |t| "<p>#{t}</p>" }.join
+  end
+  
   def errors_for(record)
     render partial: "layouts/errors", locals: {record: record}
   end
