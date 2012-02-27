@@ -3,10 +3,10 @@
 .trip_reports
   .row.last
     .eightcol
-      -if current_user
-        =link_to "Plan a new dive", new_planned_dive_path, class: "button"
       -@planned_dives.each do |planned_dive|
         .row{class: planned_dive == @planned_dives.last ? "last" : ""}
           =render partial: "snippet", locals: {planned_dive: planned_dive, homepage: false, truncate: 600}
     .fourcol.last
       =render partial: "instructions"
+      -if current_user
+        =link_to "Plan a new dive", new_planned_dive_path, class: "button"      
