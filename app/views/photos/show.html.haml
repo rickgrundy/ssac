@@ -14,5 +14,5 @@
       %h4 Next Photos
       -@next_photos.each do |np|
         .row=link_to image_tag(np.image.url(:thumbnail), alt: np.title), photo_path(np), title: np.title
-    -if current_user.can_edit?(@photo)
+    -if current_user && current_user.can_edit?(@photo)
       .row.last=link_to "Edit Photo", edit_photo_path(@photo), class: "button"
