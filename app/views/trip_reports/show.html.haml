@@ -17,10 +17,8 @@
           
       -if current_user
         .row.last
-          %h4
-            =link_to 'Add your photos from this trip', add_photos_trip_report_path(@trip_report)
-            -if current_user.can_edit?(@trip_report)
-              |
-              =link_to "Edit this trip report", edit_trip_report_path(@trip_report)
+          =link_to 'Add your photos from this trip', add_photos_trip_report_path(@trip_report), class: "button"
+          -if current_user.can_edit?(@trip_report)
+            =link_to "Edit this trip report", edit_trip_report_path(@trip_report), class: "button"
               
     .twocol.last=render partial: "years"

@@ -74,6 +74,10 @@ a, a:visited {
   text-decoration: underline;
 }
 
+a.button {
+  @include buttonify();
+}
+
 .flash {
   font-weight: 100;
   width: auto;
@@ -138,16 +142,7 @@ form {
   }
   
   input[type='submit'] {
-    cursor: pointer;
-    width: auto;
-    margin-top: $spacing*2;
-    @include gradient($link);
-    color: #FFF;
-    font-size: 1.2em;
-    padding: $spacing;
-    &:active {
-      @include gradient(lighten($link, 20%));
-    }
+    @include buttonify();
   }
 
   span.note {

@@ -34,4 +34,4 @@
           
       -if current_user && current_user.can_edit?(@planned_dive)
         .row.last
-          %h4=link_to "Edit this planned #{@planned_dive.event_type.downcase}", edit_planned_dive_path(@planned_dive)          
+          =link_to "Edit this planned #{@planned_dive.event_type.downcase}", edit_planned_dive_path(@planned_dive), class: "button"

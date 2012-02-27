@@ -44,16 +44,18 @@ $notice: #53B84D;
 }
 
 @mixin buttonify {
-  @include linkify;
-  @include gradient($button);
-  color: #FFF;
-  border: solid 1px darken($button, 15%);
-  padding: $spacing;
+  display: inline-block;
+  text-decoration: none;
   cursor: pointer;
+  width: auto;
+  @include gradient($link);
+  color: #FFF;
+  font-size: 1.2em;
+  padding: $spacing;
   &:hover {
-    background: $button;
-  }
+    @include gradient(lighten($link, 10%));
+  }  
   &:active {
-    background: lighten($button, 5%);
+    @include gradient(lighten($link, 20%));
   }
 }
