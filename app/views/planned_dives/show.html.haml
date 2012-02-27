@@ -8,10 +8,11 @@
       .row.markdown
         =markdown(@planned_dive.description)
 
-      .row.last.divers    
-        %h4 Who's Coming?
-        .markdown
-          =in_paragraphs(@planned_dive.divers)
+      -if @planned_dive.divers.present?
+        .row.last.divers    
+          %h4 Who's Coming?
+          .markdown
+            =in_paragraphs(@planned_dive.divers)
                 
     .fourcol.last
       .row
