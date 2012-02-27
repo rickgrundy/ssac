@@ -4,8 +4,14 @@
   .eightcol
     =form_tag upload_photos_trip_report_path(@trip_report), {:multipart => true} do
       -Photo::UPLOAD_COUNT.times do |i|
-        =file_field_tag "photo_#{i}"
-      =submit_tag "Upload Photos"
+        .row
+          %label{for: "photo_#{i}[image]"} Photo
+          =file_field_tag "photo_#{i}[image]"
+          
+          %label{for: "photo_#{i}[image]"} Title
+          =text_field_tag "photo_#{i}[title]"
+        
+      .row.last=submit_tag "Upload Photos"
       
   .fourcol.last
     %h3 Image Size

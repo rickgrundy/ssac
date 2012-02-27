@@ -76,6 +76,8 @@ a, a:visited {
 
 a.button {
   @include buttonify();
+  width: 100%;
+  margin-bottom: $spacing;
 }
 
 .flash {
@@ -173,8 +175,7 @@ form {
 figure {
   text-align: center;
   figcaption {
-    font-size: 0.8em;
-    line-height: 1.2em;
+    font-size: 0.9em;
   }
 }
 

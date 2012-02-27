@@ -2,6 +2,7 @@ class Photo < ActiveRecord::Base
   belongs_to :user
   belongs_to :trip_report
   scope :randomised, order: "RANDOM()"
+  scope :sorted, order: "ID ASC"
   
   validates_attachment_presence :image
   
@@ -24,4 +25,8 @@ class Photo < ActiveRecord::Base
   }
   
   UPLOAD_COUNT = 5
+  
+  def title
+    read_attribute(:title) || "Photo by #{self.user.name}"
+  end
 end

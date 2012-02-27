@@ -1,8 +1,18 @@
-=content_for :title, "A Photo from #{@photo.trip_report.destination}"
+=content_for :title, @photo.title
 
-.row
-  .twelvecol.last
-    %h5.byline=byline(@photo)
-    .photo
-      %p=link_to image_tag(@photo.image.url(:full)), trip_report_path(@photo.trip_report) 
-      %p=link_to "Back to the #{@photo.trip_report.destination} Trip Report", trip_report_path(@photo.trip_report)
+.row.last
+  .tencol
+    %h4
+      From
+      =link_to @trip_report.destination, trip_report_path(@trip_report)
+    .row.last
+      .photo=link_to image_tag(@photo.image.url(:full), alt: @photo.title), trip_report_path(@trip_report)
+      %h5.byline=byline(@photo)
+  
+  .twocol.last
+    -if @next_photos.present?
+      %h4 Next Photos
+      -@next_photos.each do |np|
+        .row=link_to image_tag(np.image.url(:thumbnail), alt: np.title), photo_path(np), title: np.title
+    -if current_user.can_edit?(@photo)
+      .row.last=link_to "Edit Photo", edit_photo_path(@photo), class: "button"

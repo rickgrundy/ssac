@@ -2,11 +2,12 @@
 
 .trip_reports
   .row.last
-    .tencol
-      -if current_user
-        =link_to "Write a new trip report", new_trip_report_path, class: "button"
+    .ninecol
       -@trip_reports.each do |trip_report|
         .row{class: trip_report == @trip_reports.last ? "last" : ""}
           =render partial: "snippet", locals: {trip_report: trip_report, homepage: false, truncate: 1000}
-    .twocol.last
-      =render partial: "years"
+    .threecol.last
+      .row=render partial: "years"
+      -if current_user
+        .row.last=link_to "Write a new trip report", new_trip_report_path, class: "button"
+      

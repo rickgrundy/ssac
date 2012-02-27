@@ -13,7 +13,7 @@ class TripReportsController < ApplicationController
   
   def show
     @trip_report = TripReport.includes(:user).find(params[:id])
-    @photos = @trip_report.photos.randomised.includes(:user).to_a
+    @photos = @trip_report.photos.sorted.includes(:user).to_a
   end
   
   def new
@@ -52,9 +52,7 @@ class TripReportsController < ApplicationController
     Photo::UPLOAD_COUNT.times do |i|
       uploaded = params["photo_#{i}"]
       break unless uploaded
-      photo = @trip_report.photos.create(user: current_user)
-      photo.image = uploaded
-      photo.save!
+      photo = @trip_report.photos.create(uploaded.merge(user: current_user))
     end
     flash[:notice] = "Nice photos!"
     redirect_to trip_report_path(@trip_report)    
