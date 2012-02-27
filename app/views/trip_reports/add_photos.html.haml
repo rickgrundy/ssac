@@ -5,11 +5,11 @@
     =form_tag upload_photos_trip_report_path(@trip_report), {:multipart => true} do
       -Photo::UPLOAD_COUNT.times do |i|
         .row
-          %label{for: "photo_#{i}[image]"} Photo
-          =file_field_tag "photo_#{i}[image]"
-          
           %label{for: "photo_#{i}[image]"} Title
           =text_field_tag "photo_#{i}[title]"
+          
+          %label{for: "photo_#{i}[image]"} Image file
+          =file_field_tag "photo_#{i}[image]"
         
       .row.last=submit_tag "Upload Photos"
       

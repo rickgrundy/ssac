@@ -5,11 +5,11 @@
     .eightcol
       %h5.byline=byline(@planned_dive)
 
-      .row.markdown
+      .row.markdown{class: @planned_dive.divers.blank? ? 'last' : ''}
         =markdown(@planned_dive.description)
 
       -if @planned_dive.divers.present?
-        .row.last.divers    
+        .row.last.divers  
           %h4 Who's Coming?
           .markdown
             =in_paragraphs(@planned_dive.divers)

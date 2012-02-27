@@ -6,7 +6,7 @@
       From
       =link_to @trip_report.destination, trip_report_path(@trip_report)
     .row.last
-      .photo=link_to image_tag(@photo.image.url(:full), alt: @photo.title), trip_report_path(@trip_report)
+      .photo=image_tag(@photo.image.url(:full), alt: @photo.title)
       %h5.byline=byline(@photo)
   
   .twocol.last
