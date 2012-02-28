@@ -4,7 +4,7 @@ class PlannedDive < ActiveRecord::Base
   scope :future, conditions: ["start_date > ?", Date.today - 1], order: "start_date ASC"
   
   extend FriendlyId
-  friendly_id :destination_and_date, use: :slugged  
+  friendly_id :destination_and_date, use: :slugged
   
   def is_a_dive?
     self.event_type.upcase == "DIVE"

@@ -1,0 +1,15 @@
+%p
+  A trip report from 
+  %b=@trip_report.destination
+  has been added to the club website.
+  
+%p
+  You can read the report and add your photos from this trip here:
+  
+%p
+  =link_to trip_report_url(@trip_report), trip_report_url(@trip_report)
+  
+%p
+  %em
+    This email was sent automatically by 
+    =link_to "www.sydneysubaquaclub.com", "www.sydneysubaquaclub.com"

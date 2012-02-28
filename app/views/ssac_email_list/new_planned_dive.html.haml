@@ -1,0 +1,30 @@
+%p
+  %h4 Where?
+  =@planned_dive.destination
+  
+%p
+  %h4 When?
+  =@planned_dive.start_date.strftime(SsacEmailList::DATE_FORMAT)
+  ="to #{@planned_dive.end_date.strftime(SsacEmailList::DATE_FORMAT)}" if @planned_dive.end_date
+  
+%p
+  %h4 Who?
+  ="#{@planned_dive.number_of_spaces || 'Unlimited'} spaces, suitable for #{@planned_dive.suitable_for.downcase}"
+
+%p
+  %h4 Description
+  =@planned_dive.description
+  
+%hr
+
+%p
+  =link_to "View this event on the website", planned_dive_url(@planned_dive)
+  
+%p
+  %b
+    Please reply to this email and let me know if you're coming.
+    
+%p
+  %em
+    This email was sent automatically by 
+    =link_to "www.sydneysubaquaclub.com", "www.sydneysubaquaclub.com"
