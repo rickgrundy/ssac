@@ -1,6 +1,6 @@
 class SsacEmailList < ActionMailer::Base
-  DATE_FORMAT = '%d %B %Y'
-  default to: "rick@rickgrundy.com"
+  helper ApplicationHelper
+  default to: "ssacmembers@googlegroups.com"
   
   def new_planned_dive(planned_dive)
     @planned_dive = planned_dive

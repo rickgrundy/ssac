@@ -4,8 +4,8 @@
   
 %p
   %h4 When?
-  =@planned_dive.start_date.strftime(SsacEmailList::DATE_FORMAT)
-  ="to #{@planned_dive.end_date.strftime(SsacEmailList::DATE_FORMAT)}" if @planned_dive.end_date
+  =@planned_dive.start_date.strftime(ApplicationHelper::DATE_FORMAT)
+  ="to #{@planned_dive.end_date.strftime(ApplicationHelper::DATE_FORMAT)}" if @planned_dive.end_date
   
 %p
   %h4 Who?
@@ -13,7 +13,7 @@
 
 %p
   %h4 Description
-  =@planned_dive.description
+  =markdown(@planned_dive.description)
   
 %hr
 
