@@ -4,6 +4,6 @@
   
   .markdown
     -if trip_report.photos.present?
-      =link_to image_tag(trip_report.random_photo.image.url(homepage ? :homepage_variable : :thumbnail_variable), alt: "A photo from #{trip_report.destination}"), trip_report_path(trip_report)
+      =link_to image_tag(trip_report.random_photo.image.url(:homepage_variable), alt: "A photo from #{trip_report.destination}"), trip_report_path(trip_report)
     =markdown(trip_report.report, truncate)
   .read_more=link_to "…Read more", trip_report_path(trip_report)
