@@ -4,7 +4,7 @@ class Committee
   end
   
   def self.diving_officer
-    'Mike Whitworth'
+    'Paul Furniss'
   end
   
   def self.secretary
@@ -16,11 +16,15 @@ class Committee
   end
   
   def self.training_officer
-    'Mike Whitworth'
+    'N/A'
   end
   
   def self.expeditions_officer
     'Gary Meakin'
+  end
+  
+  def self.social_secretary
+    'Michelle Buttfield'
   end
   
   def self.web_officer
