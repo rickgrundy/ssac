@@ -18,7 +18,8 @@ Ssac::Application.routes.draw do
   resources :photos
   resources :documents
   
-  # Legacy URLs from previous
+  # Legacy URLs from previous version of site
   match "/trip_report/:slug" => redirect("/trip_reports/%{slug}")
   match "/files" => redirect("/documents")
+  match "/planned_dives/show/:id" => redirect("/planned_dives")
 end
