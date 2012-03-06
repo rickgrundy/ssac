@@ -16,7 +16,7 @@
                 
     .fourcol.last
       .row
-        %h4 To Sign Up
+        %h3 To Sign Up
         -if current_user
           =raw "Contact #{mail_to @planned_dive.user.email, @planned_dive.user.name}."
         -else
@@ -25,12 +25,12 @@
 
       -if @planned_dive.meeting_place_and_time.present?
         .row
-          %h4 Meeting Place & Time
+          %h3 Meeting Place & Time
           =@planned_dive.meeting_place_and_time
                           
       -if @planned_dive.is_a_dive?
         .row
-          %h4 Minimum Diver Grade
+          %h3 Minimum Diver Grade
           =@planned_dive.suitable_for
           
       -if current_user && current_user.can_edit?(@planned_dive)

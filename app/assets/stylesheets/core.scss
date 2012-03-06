@@ -29,11 +29,11 @@ h1 {
 }
 
 h1, h2, h3, h4, h5 {
-  font-weight: 100;
   line-height: 1em;
 }
 
 h1, h2, h3 {
+  font-family: 'Josefin Slab';
   a {
     text-decoration: none;
     color: inherit;
@@ -41,13 +41,13 @@ h1, h2, h3 {
 }
 
 h2 {
-  font-size: 2.8em;
+  font-size: 3em;
   margin-bottom: $spacing*2;
   color: $link;
 }
 
 h3, h4 {
-  font-size: 2em;
+  font-size: 1.8em;
   margin-bottom: $spacing;
   color: $link;
 }
@@ -84,7 +84,6 @@ a.button {
 }
 
 .flash {
-  font-weight: 100;
   width: auto;
   padding: 0 $spacing;
   font-size: 1.5em;

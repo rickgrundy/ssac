@@ -7,7 +7,7 @@
     %meta{name: "description", content: "SSAC is a Sydney dive club offering members SCUBA diving and social activities in the friendly environment of a BSAC branch."}
     %meta{name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=2"}
     
-    =stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:100,300"
+    =stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:300|Josefin+Slab:300&subset=latin&v2"
     =stylesheet_link_tag "application"
     =stylesheet_link_tag "http://flowplayer.org/tools/demos/dateinput/css/skin1.css"
     =javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
@@ -17,7 +17,7 @@
   %body
     .container
       .sidebar
-        %h1=link_to "Sydney Sub Aqua Club - BSAC 2373", root_path      
+        %h1=link_to "Sydney Sub Aqua Club - BSAC 2373", root_path
         .banner
           =link_to image_tag("banner.jpg", alt: "Sydney Sub Aqua Club - BSAC 2373"), root_path
         %nav
