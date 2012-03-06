@@ -13,8 +13,7 @@ class Photo < ActiveRecord::Base
       :access_key_id => ENV["S3_KEY"],
       :secret_access_key => ENV["S3_SECRET"]
     },
-    # :s3_host_alias => 'cdn.sydneysubaquaclub.com'
-    :s3_host_alias => Rails.env.production? ? 'd25tt7ixuvduru.cloudfront.net' : "s3.amazonaws.com/sydneysubaquaclub-development",
+    :s3_host_alias => Rails.env.production? ? 'cdn.sydneysubaquaclub.com' : "s3.amazonaws.com/sydneysubaquaclub-development",
     :url => ':s3_alias_url',
     :bucket => "sydneysubaquaclub-#{Rails.env}",
     :path => "images/:style/:id.:extension",
