@@ -11,7 +11,7 @@ class Document < ActiveRecord::Base
     },
     :s3_host_alias => Rails.env.production? ? 'cdn.sydneysubaquaclub.com' : nil,
     :url => ':s3_alias_url',
-    :bucket => "SSAC-#{Rails.env}",
+    :bucket => "sydneysubaquaclub-#{Rails.env}",
     :path => "files/:filename",
   }
 end
