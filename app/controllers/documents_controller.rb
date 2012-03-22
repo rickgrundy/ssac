@@ -2,7 +2,7 @@ class DocumentsController < ApplicationController
   before_filter :authenticate_user!
   
   def index
-    @documents = Document.all
+    @documents = Document.order(:document_file_name).all
     @document = Document.new
   end
   
