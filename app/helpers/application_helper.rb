@@ -18,6 +18,10 @@ module ApplicationHelper
     render partial: "layouts/errors", locals: {record: record}
   end
   
+  def format_date(date)
+    date.strftime(DATE_FORMAT)
+  end
+  
   def byline(record)
     if record.is_a? PlannedDive
       return raw "#{record.start_date.strftime(DATE_FORMAT)}#{' to ' + record.end_date.strftime(DATE_FORMAT) if record.end_date}."

@@ -6,8 +6,10 @@ class TripReportsController < ApplicationController
     if params[:year]
       @year = params[:year].to_i
       @trip_reports = TripReport.includes(:user, :photos).order("date ASC").where("date between ? and ?", Date.new(@year), Date.new(@year + 1))
+      @dive_log = PlannedDive.order("start_date DESC").where("event_type = 'Dive' and start_date between ? and ?", Date.new(@year), Date.new(@year + 1))
     else
       @trip_reports = TripReport.includes(:user, :photos).recent.where("date > ?", Date.today - 1.years)
+      @dive_log = PlannedDive.order("start_date DESC").where("event_type = 'Dive' and start_date between ? and ?", Date.today - 1.years, Date.today)
     end
   end
   

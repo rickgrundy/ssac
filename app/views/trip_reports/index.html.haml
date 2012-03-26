@@ -7,7 +7,7 @@
         .row{class: trip_report == @trip_reports.last ? "last" : ""}
           =render partial: "snippet", locals: {trip_report: trip_report, homepage: false, truncate: 1000}
     .threecol.last
-      .row=render partial: "years"
       -if current_user
-        .row.last=link_to "Write a new trip report", new_trip_report_path, class: "button"
-      
+        .row=link_to "Write a new trip report", new_trip_report_path, class: "button"    
+      .row=render partial: "years"
+      .row.last=render partial: "dive_log"
