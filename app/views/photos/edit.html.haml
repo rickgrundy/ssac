@@ -5,8 +5,9 @@
     =form_for @photo, {:multipart => true}do |f|
       =errors_for(@photo)
       
-      =f.label :image, "Replace image (optional)"
-      =f.file_field :image
+      / Now that we're using CLoudfront we can't change the image until we explicitly invalidate the cache, or include the image version in the filename.
+      / =f.label :image, "Replace image (optional)"
+      / =f.file_field :image
   
       =f.label :title
       =f.text_field :title
