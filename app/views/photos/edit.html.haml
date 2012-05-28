@@ -14,6 +14,8 @@
       =f.submit
       
   .fourcol.last
-    %h3 Image Size
-    %p Photos will be magically resized to fit inside an 912x620 pixel frame. 
-    %p You can save yourself some bandwidth by resizing massive files to something close to this, but don't shrink them any smaller or you'll lose resolution and quality.      
+    .row
+      %h3 Image Size
+      %p Photos will be magically resized to fit inside an 912x620 pixel frame. 
+      %p You can save yourself some bandwidth by resizing massive files to something close to this, but don't shrink them any smaller or you'll lose resolution and quality.      
+    .row.last=link_to "Delete this Photo", photo_path(@photo), method: :delete, class: "button", confirm: "Are you sure you want to delete this photo?"

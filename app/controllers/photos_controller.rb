@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
   before_filter :authenticate_user!, except: [:show]
-    before_filter :can_edit?, only: [:edit, :update]
+  before_filter :can_edit?, except: [:show]
   
   def show
     @photo = Photo.includes(:trip_report, :user).find(params[:id])
@@ -22,5 +22,12 @@ class PhotosController < ApplicationController
   def can_edit?
     @photo = Photo.find(params[:id])
     redirect_to root_path unless current_user.can_edit?(@photo)
+  end
+  
+  def destroy
+    @photo = Photo.find(params[:id])
+    @photo.destroy
+    flash[:notice] = "Your photo has been deleted."
+    redirect_to trip_report_path(@photo.trip_report)
   end
 end
