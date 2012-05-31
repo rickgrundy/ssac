@@ -15,7 +15,9 @@ Ssac::Application.routes.draw do
       post :upload_photos
     end
   end
-  resources :photos
+  resources :photos do
+    get :toggle_star, on: :member
+  end
   resources :documents
   
   # Legacy URLs from previous version of site

@@ -2,6 +2,8 @@ class Photo < ActiveRecord::Base
   belongs_to :user
   belongs_to :trip_report
   scope :randomised, order: "RANDOM()"
+  scope :starred, where(starred: true)
+  scope :not_starred, where(starred: false)
   scope :sorted, order: "ID ASC"
   
   validates_attachment_presence :image

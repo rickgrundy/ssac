@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120227090417) do
+ActiveRecord::Schema.define(:version => 20120531065047) do
 
   create_table "documents", :force => true do |t|
     t.integer  "user_id"
@@ -30,9 +30,10 @@ ActiveRecord::Schema.define(:version => 20120227090417) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.string   "title"
+    t.boolean  "starred",            :default => false
   end
 
   create_table "planned_dives", :force => true do |t|

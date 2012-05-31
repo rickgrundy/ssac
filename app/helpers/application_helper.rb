@@ -1,6 +1,10 @@
 module ApplicationHelper
   DATE_FORMAT = '%d %B %Y'
   
+  def administrator?
+    current_user && current_user.administrator
+  end
+  
   def committee_info_path
     club_info_path(anchor: "committee")
   end

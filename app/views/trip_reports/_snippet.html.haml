@@ -3,7 +3,7 @@
   %h5.byline=byline(trip_report)
   
   .markdown
-    -if trip_report.photos.present?
+    -if trip_report.photos.starred.present?
       =link_to image_tag(trip_report.random_photo.image.url(:homepage_variable), alt: "A photo from #{trip_report.destination}"), trip_report_path(trip_report)
     =markdown(trip_report.report, truncate)
   .read_more=link_to "…Read more", trip_report_path(trip_report)

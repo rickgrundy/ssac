@@ -18,4 +18,12 @@ $(function() {
    $(":date").dateinput({
      format: 'dd mmmm yyyy'
    });
+   
+   $("a.star").click(function() {
+     var link = $(this);
+     var starred = link.toggleClass("starred").hasClass("starred");
+     $.get(link.attr("href"), {star: starred});
+     return false;  
+   });
 });
+

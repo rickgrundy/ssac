@@ -287,3 +287,14 @@ dl {
         font-size: 1.2em;
     } 
 }
+
+.star {
+    float: right;   
+    width: 24px;
+    height: 24px;
+    background: url("star-false.png") no-repeat top left;
+}
+
+.star.starred {
+    background-image: url("star-true.png");
+}

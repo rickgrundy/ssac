@@ -15,7 +15,7 @@ class TripReportsController < ApplicationController
   
   def show
     @trip_report = TripReport.includes(:user).find(params[:id])
-    @photos = @trip_report.photos.sorted.includes(:user).to_a
+    @photos = @trip_report.photos.starred.sorted.includes(:user).to_a + @trip_report.photos.not_starred.sorted.includes(:user).to_a
   end
   
   def new
