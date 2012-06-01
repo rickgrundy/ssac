@@ -16,16 +16,13 @@ class TripReport < ActiveRecord::Base
   
   def paragraphs
     paras = Markdown.new(self.report).to_html.split("</p>").reject(&:blank?).map { |p| p += "</p>" }
-    last_paragraph_index = 0
-    paras.each_with_index do |p, i| 
-      if i > 0 && p.length < MIN_PARAGRAPH_LENGTH
-        paras[last_paragraph_index] += p
+    for i in 0..paras.length - 2 do
+      if paras[i].length < MIN_PARAGRAPH_LENGTH
+        paras[i+1] = paras[i] + paras[i+1]
         paras[i] = nil
-      else
-        last_paragraph_index = i
       end
-    end.compact
-    paras
+    end
+    paras.compact
   end
   
   private
