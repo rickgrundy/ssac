@@ -123,8 +123,9 @@ max-width: 100%;
   margin-bottom: 0;
   padding-bottom: 0;
 }
-.row.last {
+.row:last-child, .row.last {
   margin-bottom: $spacing;
+  border-bottom: none;
 }
 .row .row:nth-child(1) {
   padding-top: 0;
