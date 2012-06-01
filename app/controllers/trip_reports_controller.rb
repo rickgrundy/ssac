@@ -16,7 +16,7 @@ class TripReportsController < ApplicationController
   def show
     @trip_report = TripReport.includes(:user).find(params[:id])
     @photos = @trip_report.photos.starred.sorted.includes(:user).to_a + @trip_report.photos.not_starred.sorted.includes(:user).to_a
-    @paragraphs = Markdown.new(@trip_report.report).to_html.split("</p>").reject(&:blank?)
+    @paragraphs = @trip_report.paragraphs
   end
   
   def new
