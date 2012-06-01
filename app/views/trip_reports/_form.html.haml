@@ -1,5 +1,5 @@
 .row.last
-  .twelvecol
+  .ninecol
     =form_for @trip_report do |f|
       =errors_for(@trip_report)
   
@@ -13,3 +13,31 @@
       =f.text_area :report
   
       =f.submit
+      
+  .threecol.last
+    %h3 Markdown Syntax
+        
+    .row 
+      %h4 Headings
+      %p ## Big Heading
+      %p ### Medium Heading
+      %p #### Small Heading
+      
+    .row
+      %h4 Hyperlinks
+      %p [Link Text](http://google.com)
+      
+    .row
+      %h4 Lists
+      %p 
+        * Bulleted List 1
+        %br
+        * Bulleted List 2
+        %br
+        * Bulleted List 3
+      %p  
+        1. Numbered List 1
+        %br
+        2. Numbered List 2
+        %br
+        3. Numbered List 3
