@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title="#{content_for :title} - SSAC"
+    %title="#{content_for :title}"
     %meta{"http-equiv" => "Content-Type", content: "text/html; charset=UTF-8"}
     %meta{name: "keywords", content: "scuba, sydney, sydney bsac, diving, club, dive courses, dive club, diving club, sub aqua club, dive trips, social diving, BSAC"}
     %meta{name: "description", content: "SSAC is a Sydney dive club offering members SCUBA diving and social activities in the friendly environment of a BSAC branch."}
@@ -15,7 +15,7 @@
   %body
     .container
       .sidebar
-        %h1=link_to "Sydney Sub Aqua Club - BSAC 2373", root_path
+        %h1=link_to "Sydney Sub Aqua Club", root_path
         .banner
           =link_to image_tag("banner.jpg", alt: "Sydney Sub Aqua Club - BSAC 2373"), root_path
         %nav
