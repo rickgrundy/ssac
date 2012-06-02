@@ -147,10 +147,16 @@ max-width: 100%;
   float: left;
 }
 
+.footer {
+  clear: both;
+  margin-left: 15.8%;
+  margin-bottom: 20px;
+}
+
 @media all and (min-width: 600px) {
   .grid {
     width: 80%;
-    min-height: 660px;
+    min-height: 760px;
     margin-bottom: 20px;
     border: solid 1px $subtle;
     border-top-width: 0;
@@ -189,5 +195,9 @@ max-width: 100%;
     padding: 0;
     margin-top: 10px;
     width: 100%;
+  }
+  .footer {
+    margin-left: 0;
+    padding: 20px 20px 0;
   }
 }

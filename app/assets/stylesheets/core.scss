@@ -21,13 +21,23 @@ body {
     }
   }
   .fb-like {
-    text-align: right;
+    float: right;
   }
 }
 
-
 .account {
   text-align: right;
+}
+
+.footer {
+  color: lighten($text, 30%);
+  text-align: center;
+  .account {
+    display: inline;
+  }
+  a, a:visited {
+    color: inherit;
+  }
 }
 
 h1 {
@@ -210,6 +220,7 @@ dl {
   margin-bottom: $spacing;
   dt {
     float: left;
+    clear: left;
     width: 28%;
     margin-right: 2%;
     text-align: right;

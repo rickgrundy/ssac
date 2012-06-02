@@ -26,9 +26,9 @@
           =link_to "Membership", membership_info_path
           =link_to "Trip Reports", trip_reports_path
           =link_to "Planned Dives", planned_dives_path
-          =link_to "Members' Files", documents_path if current_user
+          =link_to "Members' Files", documents_path
           
-        .row.fb-like=render partial: "layouts/facebook_like_button", faces: false
+        .row.like-button=render partial: "layouts/facebook_like_button", faces: false
       
       .grid
         .row.header
@@ -39,5 +39,12 @@
         =render partial: "layouts/flashes" unless flash.empty?
             
         =yield
+      
+      .footer
+        &copy; Sydney Sub Aqua Club
+        |
+        =link_to "Contact Us", committee_info_path
+        |
+        =render partial: "layouts/account"
         
     =render partial: "layouts/google_analytics"

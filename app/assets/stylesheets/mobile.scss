@@ -1,20 +1,26 @@
 @media all and (max-width: 600px) {
-  h1 {
+  h2 {
     height: auto;
-    font-size: 1.5em;
-    line-height: 1.5em;
-  }
-  .grid {
-    margin-bottom: 40px;
-  }
-  .account {
-    position: absolute;
-    bottom: 20px;
+    font-size: 2em;
   }
   h3, h4, h5 {
     margin-top: 20px;
   }
-  .sidebar .banner {
+  .account {
+    display: none;
+  }
+  .sidebar {
+    .like-button {
+      display: none;
+    } 
+    .banner, h1 {
+      display: none;
+    }
+    nav {
+      font-size: 1em;
+    }
+  }
+  .homepage .fourcol {
     display: none;
   }
 }
