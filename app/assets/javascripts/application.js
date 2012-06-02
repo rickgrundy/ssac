@@ -15,7 +15,7 @@
 //= require_tree .
 
 $(function() {
-   $(":date").dateinput({
+   $("[type=date]").dateinput({
      format: 'dd mmmm yyyy'
    });
    
