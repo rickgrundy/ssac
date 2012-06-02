@@ -13,6 +13,8 @@
     =javascript_include_tag "application"
     =csrf_meta_tags
   %body
+    =render partial: "layouts/facebook_like_script"
+    
     .container
       .sidebar
         %h1=link_to "Sydney Sub Aqua Club", root_path
@@ -25,6 +27,8 @@
           =link_to "Trip Reports", trip_reports_path
           =link_to "Planned Dives", planned_dives_path
           =link_to "Members' Files", documents_path if current_user
+          
+        .row.fb-like=render partial: "layouts/facebook_like_button", faces: false
       
       .grid
         .row.header

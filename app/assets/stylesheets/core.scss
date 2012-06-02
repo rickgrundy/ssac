@@ -8,17 +8,23 @@ body {
   line-height: 1.4em;
 }
 
-nav {
-  margin-top: $spacing;
-  line-height: 1.8em;
-  font-size: 1.2em;
-  a {
-    text-decoration: none; 
-    &:hover {
-      background: $very-subtle;
+.sidebar {
+  nav {
+    margin-top: $spacing;
+    line-height: 1.8em;
+    font-size: 1.2em;
+    a {
+      text-decoration: none; 
+      &:hover {
+        background: $very-subtle;
+      }
     }
   }
+  .fb-like {
+    text-align: right;
+  }
 }
+
 
 .account {
   text-align: right;

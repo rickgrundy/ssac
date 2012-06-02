@@ -27,3 +27,5 @@
             %figure
               =link_to image_tag(photo.image.url(:homepage_variable), alt: "A photo from #{photo.trip_report.destination}"), photo_path(photo)
               %figcaption=link_to photo.title, photo_path(photo)
+              
+      .row=render partial: "layouts/facebook_like_button", locals: {faces: true}
