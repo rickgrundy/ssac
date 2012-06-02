@@ -8,5 +8,4 @@
           =render partial: "snippet", locals: {planned_dive: planned_dive, homepage: false, truncate: 700}
     .fourcol.last
       =render partial: "instructions"
-      -if current_user
-        =link_to "Plan a new dive", new_planned_dive_path, class: "button"      
+      =link_to "Plan a new dive", new_planned_dive_path, class: "button"

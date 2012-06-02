@@ -16,8 +16,7 @@
     .threecol.last
       .row=render partial: "years"
 
-      -if current_user
-        .row.last
-          =link_to 'Add your photos', add_photos_trip_report_path(@trip_report), class: "button"
-          -if current_user.can_edit?(@trip_report)
-            =link_to "Edit this report", edit_trip_report_path(@trip_report), class: "button"
+      .row.last
+        =link_to 'Add your photos', add_photos_trip_report_path(@trip_report), class: "button"
+        -if current_user && current_user.can_edit?(@trip_report)
+          =link_to "Edit this report", edit_trip_report_path(@trip_report), class: "button"
