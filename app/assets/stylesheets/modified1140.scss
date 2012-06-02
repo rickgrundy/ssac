@@ -13,7 +13,6 @@ padding-right: 20px;
 width: 100%;
 max-width: 1140px;
 margin: 0 auto;
-overflow: hidden;
 }
 
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
@@ -107,14 +106,12 @@ max-width: 100%;
   padding-right: 20px;
   max-width: 1140px;
   margin: 0 auto;
-  overflow: hidden;
   position: relative;
 }
 
 .row {
   min-width: 0;
   margin: 0 auto;
-  overflow: hidden;
   padding: $spacing 0;
   border-bottom: solid 1px $subtle
 }
