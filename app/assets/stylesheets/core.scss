@@ -11,7 +11,8 @@ body {
 nav {
   margin-top: $spacing;
   line-height: 1.8em;
-  a { 
+  font-size: 1.2em;
+  a {
     text-decoration: none; 
     &:hover {
       background: $very-subtle;
@@ -32,7 +33,7 @@ h1, h2, h3, h4, h5 {
   line-height: 1em;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: 'Josefin Slab';
   a {
     text-decoration: none;
@@ -62,6 +63,7 @@ h5 {
 }
 
 .byline {
+  font-size: 1em;
   margin-bottom: $spacing*2;
 }
 
@@ -225,9 +227,6 @@ dl {
 .snippet {
   h3 {
     margin-bottom: $spacing/2;
-  }
-  .byline {
-    font-size: 1.2em;
   }
   .read_more {
     display: block;

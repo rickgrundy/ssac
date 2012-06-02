@@ -1,6 +1,6 @@
-%h4 SSAC Dive Log
+%h3 SSAC Dive Log
 .dive_log
   -@dive_log.each do |planned_dive|
     .dive
-      .when=format_date(planned_dive.start_date)
-      %h4.destination=planned_dive.destination
+      .when=format_date planned_dive.start_date
+      .destination=link_to planned_dive.destination, planned_dive_path(planned_dive)

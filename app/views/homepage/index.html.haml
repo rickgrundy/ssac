@@ -1,14 +1,15 @@
--content_for :title, "Sydney Sub Aqua Club News"
+-content_for :title, "Sydney Sub Aqua Club"
 
 .homepage
   .row.last
     .eightcol
       -@items.each do |item|
-        .row{class: item == @items.last ? "last" : ""}
+        .row
           -if item.class == TripReport
             =render partial: 'trip_reports/snippet', locals: {trip_report: item, homepage: true, truncate: 700}
           -if item.class == PlannedDive
-            =render partial: 'planned_dives/snippet', locals: {planned_dive: item, homepage: true, truncate: 700}
+            =render partial: 'planned_dives/snippet', locals: {planned_dive: item, homepage: true, truncate: 700}      
+        
     .fourcol.last
       .row
         %h3 Finding Us

@@ -30,7 +30,7 @@ module ApplicationHelper
     if record.is_a? PlannedDive
       return raw "#{record.start_date.strftime(DATE_FORMAT)}#{' to ' + record.end_date.strftime(DATE_FORMAT) if record.end_date}."
     elsif record.is_a? TripReport
-      return raw "#{record.user.name} reporting on #{record.date.strftime(DATE_FORMAT)}"
+      return raw "#{record.date.strftime(DATE_FORMAT)}, #{record.user.name} reporting"
     elsif record.is_a? Photo
       return raw "Taken by #{record.user.name} on #{record.created_at.strftime(DATE_FORMAT)}"
     end
