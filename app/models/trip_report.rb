@@ -34,4 +34,8 @@ class TripReport < ActiveRecord::Base
   def normalize_friendly_id(string)
     super.gsub("-", "_")
   end
+  
+  def should_generate_new_friendly_id?
+    new_record?
+  end
 end
