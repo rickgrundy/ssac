@@ -7,10 +7,9 @@ gem 'devise'
 gem 'friendly_id', '~> 4.0.0'
 gem 'paperclip'
 gem 'aws-sdk', '~> 1.3.4'
-
 gem 'pg'
-
 gem 'redcarpet'
+gem 'newrelic_rpm'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
