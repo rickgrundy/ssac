@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'thin'
 gem 'rails', '3.2.1'
 gem 'jquery-rails'
 gem 'haml', '3.1.4'
