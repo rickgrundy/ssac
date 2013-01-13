@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'thin'
 gem 'rails', '3.2.11'
-gem 'jquery-rails'
+gem 'jquery-rails', '2.1.4'
 gem 'haml', '3.1.4'
 gem 'devise'
 gem 'friendly_id', '~> 4.0.0'
