@@ -1,33 +1,13 @@
 class Committee
-  def self.chairman
-    'Jonathan Pearson'
+  class Position < Struct.new(:title, :email, :name)
   end
   
-  def self.diving_officer
-    'Paul Furniss'
-  end
-  
-  def self.secretary
-    'Ben Crossett'
-  end
-  
-  def self.treasurer
-    'Rob Larish'
-  end
-  
-  def self.training_officer
-    'N/A'
-  end
-  
-  def self.expeditions_officer
-    'Gary Meakin'
-  end
-  
-  def self.social_secretary
-    'Michelle Buttfield'
-  end
-  
-  def self.web_officer
-    'Rick Grundy'
-  end
+  POSITIONS = [
+    Position.new('Chairman',            'chairman@sydneysubaquaclub.com',      'Ben Crossett'),
+    Position.new('Diving Officer',      'divingofficer@sydneysubaquaclub.com', 'Paul Furniss'),
+    Position.new('Secretary',           'secretary@sydneysubaquaclub.com',     'Stuart Marston'),
+    Position.new('Treasurer',           'finance@sydneysubaquaclub.com',       'Robert Larisch'),
+    Position.new('Expeditions Officer', 'diving@sydneysubaquaclub.com',        'Gary Meakin'),
+    Position.new('Web Officer',         'web@sydneysubaquaclub.com',           'Rick Grundy')
+  ]
 end

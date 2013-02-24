@@ -83,24 +83,8 @@
       %p
         SSAC has seven committee members who are elected once a year to help organise and run the club. Any member can volunteer to stand for a commitee position and this year's lucky winners are:
       %dl
-        %dt Chairman
-        %dd=mail_to 'chairman@sydneysubaquaclub.com', Committee.chairman
+        -Committee::POSITIONS.each do |position|
+          %dt=position.title
+          %dd=mail_to position.email, position.name
 
-        %dt Diving Officer
-        %dd=mail_to 'divingofficer@sydneysubaquaclub.com', Committee.diving_officer
-
-        %dt Secretary
-        %dd=mail_to 'secretary@sydneysubaquaclub.com', Committee.secretary
-
-        %dt Treasurer
-        %dd=mail_to 'finance@sydneysubaquaclub.com', Committee.treasurer
-
-        %dt Social Secretary
-        %dd=mail_to 'social@sydneysubaquaclub.com', Committee.social_secretary
-
-        %dt Expeditions Officer
-        %dd=mail_to 'diving@sydneysubaquaclub.com', Committee.expeditions_officer
-
-        %dt Web Officer
-        %dd=mail_to 'web@sydneysubaquaclub.com', Committee.web_officer
       %p Feel free to email anyone on this list with any questions you have about the club or general diving in Sydney.      
