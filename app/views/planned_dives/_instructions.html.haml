@@ -8,10 +8,10 @@
     %ol
       %li 
         Discuss your idea with the club Diving Officer,
-        = mail_to 'divingofficer@sydneysubaquaclub.com', Committee.diving_officer
+        = mail_to Committee::DIVING_OFFICER.email, Committee::DIVING_OFFICER.name
       %li 
         If 
-        = Committee.diving_officer.split.first
+        = Committee::DIVING_OFFICER.first_name
         says yes then go ahead and advertise it using the 
         = link_to 'dive planner', new_planned_dive_path
         on the club website.
