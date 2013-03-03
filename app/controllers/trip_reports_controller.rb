@@ -28,6 +28,7 @@ class TripReportsController < ApplicationController
     @trip_report.user = current_user
     if @trip_report.save
       SsacEmailList.new_trip_report(@trip_report).deliver
+      SsacFacebook.new_trip_report(@trip_report)
       flash[:notice] = "Your trip report has been saved."
       redirect_to trip_report_path(@trip_report)
     else

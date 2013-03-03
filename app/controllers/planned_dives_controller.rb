@@ -19,6 +19,7 @@ class PlannedDivesController < ApplicationController
     @planned_dive.user = current_user
     if @planned_dive.save
       SsacEmailList.new_planned_dive(@planned_dive).deliver
+      SsacFacebook.new_planned_dive(@planned_dive)
       flash[:notice] = "Your planned dive has been saved."
       redirect_to planned_dive_path(@planned_dive)
     else

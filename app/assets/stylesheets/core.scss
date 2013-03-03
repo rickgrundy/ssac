@@ -20,8 +20,13 @@ body {
       }
     }
   }
-  .fb-like {
+  .like-button {
+    width: auto;
+    margin-top: 2em;
+    border-top: solid 1px $subtle;
     float: right;
+    margin-right: 1em;
+    text-align: right;
   }
 }
 

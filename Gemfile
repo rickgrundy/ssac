@@ -11,6 +11,7 @@ gem 'aws-sdk', '~> 1.3.4'
 gem 'pg'
 gem 'redcarpet'
 gem 'newrelic_rpm'
+gem 'fb_graph'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

@@ -28,7 +28,10 @@
           =link_to "Planned Dives", planned_dives_path
           =link_to "Members' Files", documents_path
           
-        .row.like-button=render partial: "layouts/facebook_like_button", faces: false
+        .row.like-button
+          =render partial: "layouts/facebook_like_button", faces: false
+          %br
+          =link_to "SSAC on Facebook", "http://www.facebook.com/sydneysubaquaclub", target: "_blank"
       
       .grid
         .row.header
