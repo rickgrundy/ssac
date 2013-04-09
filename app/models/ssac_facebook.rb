@@ -1,5 +1,6 @@
 class SsacFacebook
   def self.new_planned_dive(planned_dive)
+    return # Can't work out why it started posting as my personal account and not the app.
     return unless Rails.env.production?
     page.feed!(
       link: Rails.application.routes.url_helpers.planned_dive_url(planned_dive, {host: "sydneysubaquaclub.com"}),
@@ -10,6 +11,7 @@ class SsacFacebook
   end
   
   def self.new_trip_report(trip_report)
+    return # Can't work out why it started posting as my personal account and not the app.
     return unless Rails.env.production?
     page.feed!(
       link: Rails.application.routes.url_helpers.trip_report_url(trip_report, {host: "sydneysubaquaclub.com"}),
