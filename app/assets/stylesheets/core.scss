@@ -27,6 +27,10 @@ body {
     float: right;
     margin-right: 1em;
     text-align: right;
+    .fb_iframe_widget iframe {
+      left: 0; // For some reason FB now absolutely position this.
+      top: 0;
+    }
   }
 }
 
