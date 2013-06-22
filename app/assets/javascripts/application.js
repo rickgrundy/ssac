@@ -28,5 +28,11 @@ $(function() {
      });
      return false;  
    });
+   
+   $("#planned_dive_start_date").change(function() {
+       var startDatePicker = $("#planned_dive_start_date").data("dateinput");
+       var endDatePicker = $("#planned_dive_end_date").data("dateinput");
+       endDatePicker.setValue(startDatePicker.getValue());
+   });
 });
 

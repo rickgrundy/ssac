@@ -1,7 +1,7 @@
 class HomepageController < ApplicationController
   PHOTO_COUNT = 8
-  TRIP_REPORT_COUNT = 3
-  PLANNED_DIVE_COUNT = 3
+  TRIP_REPORT_COUNT = 4
+  PLANNED_DIVE_COUNT = 4
   def index
     @trip_reports = TripReport.recent.includes(:photos).first(TRIP_REPORT_COUNT)
     @planned_dives = PlannedDive.future.includes(:user).first(PLANNED_DIVE_COUNT)
