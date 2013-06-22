@@ -164,6 +164,7 @@ form {
   
   input[type='file'] {
     width: auto;
+    max-width: 95%;
     padding: default;
     background: transparent;
   }
@@ -324,7 +325,9 @@ dl {
     background-image: url("star-true.png");
 }
 
-.change-document-category {
-  float: left;
-  margin-right: 1em;
+.files {
+  .change-document-category {
+    float: left;
+    margin-right: 1em;
+  } 
 }
