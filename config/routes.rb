@@ -16,7 +16,7 @@ Ssac::Application.routes.draw do
     end
   end
   resources :photos do
-    get :toggle_star, on: :member
+    put :toggle_star, on: :member
   end
   resources :documents
   

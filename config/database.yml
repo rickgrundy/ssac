@@ -1,6 +1,7 @@
 
 development:
   adapter: postgresql
+  host: localhost
   database: ssac_development
   pool: 5
   timeout: 5000

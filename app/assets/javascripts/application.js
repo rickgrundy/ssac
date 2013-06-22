@@ -22,7 +22,10 @@ $(function() {
    $("a.star").click(function() {
      var link = $(this);
      var starred = link.toggleClass("starred").hasClass("starred");
-     $.get(link.attr("href"), {star: starred});
+     $.ajax(link.attr("href"), {
+         type: "PUT",
+         data: {star: starred}
+     });
      return false;  
    });
 });
