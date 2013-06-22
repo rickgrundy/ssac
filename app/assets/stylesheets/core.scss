@@ -19,6 +19,13 @@ body {
         background: $very-subtle;
       }
     }
+    h5 {
+      padding-right: 15px;
+      color: $subtle;
+      font-weight: normal;
+      font-size: .6em;
+      margin: $spacing 0 0;
+    }
   }
   .like-button {
     width: auto;
