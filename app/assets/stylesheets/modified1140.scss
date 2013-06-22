@@ -72,7 +72,7 @@ width: 100%;
 float: left;
 }
 
-.row .last, .row > div:last-child {
+.row .last, .row > .onecol:last-child, .row > .twocol:last-child, .row > .threecol:last-child, .row > .fourcol:last-child, .row > .fivecol:last-child, .row > .sixcol:last-child, .row > .sevencol:last-child, .row > .eightcol:last-child, .row > .ninecol:last-child, .row > .tencol:last-child, .row > .elevencol:last-child {
 margin-right: 0px;
 float: right;
 }
@@ -94,7 +94,7 @@ max-width: 100%;
 	}
 	
 	.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol,
-	.row .last, .row > div:last-child {
+	.row .last, .row > .onecol:last-child, .row > .twocol:last-child, .row > .threecol:last-child, .row > .fourcol:last-child, .row > .fivecol:last-child, .row > .sixcol:last-child, .row > .sevencol:last-child, .row > .eightcol:last-child, .row > .ninecol:last-child, .row > .tencol:last-child, .row > .elevencol:last-child {
 	width: auto;
 	float: none;
 	margin-left: 0px;
