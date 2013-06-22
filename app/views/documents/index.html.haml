@@ -1,13 +1,16 @@
 -content_for :title, "SSAC Files (Members Only)"
 
 .row.last
-  .sixcol.files
-    -@categories.each do |name, documents|
-      .row
-        %h3=name
+  .eightcol
+    .row.section-links=raw @categories.map { |cat, documents| link_to cat, "##{cat.parameterize}" }.join(" | ")
+      
+    -@categories.each do |cat, documents|
+      .row.documents
+        %a{id: cat.parameterize}
+        %h3=cat
         -documents.each do |document|
           .document
-            -if administrator?
+            -if administrator? #&& false # Remove false if editing is required in the future
               .change-document-category=select_tag "category_#{document.id}", 
                 options_from_collection_for_select(Document::CATEGORIES, :to_s, :to_s, document.category), 
                 {"data-href" => url_for(document)}

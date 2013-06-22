@@ -280,11 +280,14 @@ dl {
   text-align: center;
 }
 
-.files {
-  a {
-    display: block;
-    margin: $spacing/2;
+.documents {
+  .document {
+    padding: $spacing/2;
   }
+  .change-document-category {
+    float: left;
+    margin-right: 1em;
+  }  
 }
 
 .planned_dive {
@@ -323,11 +326,4 @@ dl {
 
 .star.starred {
     background-image: url("star-true.png");
-}
-
-.files {
-  .change-document-category {
-    float: left;
-    margin-right: 1em;
-  } 
 }
