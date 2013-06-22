@@ -1,4 +1,14 @@
 class Document < ActiveRecord::Base
+  CATEGORIES = [
+    "Committee minutes",
+    "AGM minutes",
+    "Constitution",
+    "Diving & safety",
+    "Accounts",
+    "Training",
+    "Other"
+  ]
+  
   belongs_to :user
   validates_attachment_presence :document
     

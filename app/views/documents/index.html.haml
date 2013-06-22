@@ -2,8 +2,17 @@
 
 .row.last
   .sevencol.files
-    -@documents.each do |document|
-      =link_to document.document_file_name, document.document.url
+    -@categories.each do |name, documents|
+      .row
+        %h3=name
+        -documents.each do |document|
+          .document
+            -if administrator?
+              .change-document-category=select_tag "category_#{document.id}", 
+                options_from_collection_for_select(Document::CATEGORIES, :to_s, :to_s), 
+                {"data-href" => url_for(document)}
+            =link_to document.document_file_name, document.document.url
+            
   .fivecol.last
     %h3 Upload a New File
     =form_for @document, multipart: true do |f|

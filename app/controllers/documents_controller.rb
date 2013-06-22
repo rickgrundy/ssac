@@ -1,8 +1,9 @@
 class DocumentsController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :is_administrator?, only: [:update]
   
   def index
-    @documents = Document.order(:document_file_name).all
+    @categories = Document.order(:document_file_name).all.group_by(&:category)
     @document = Document.new
   end
   
@@ -17,5 +18,12 @@ class DocumentsController < ApplicationController
       @documents = Document.all
       render action: "index"
     end
+  end
+  
+  def update
+    @document = Document.find(params[:id])
+    @document.update_attributes(params[:document])
+    @document.save!
+    render text: "OK"
   end
 end

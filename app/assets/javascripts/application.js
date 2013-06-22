@@ -34,5 +34,13 @@ $(function() {
        var endDatePicker = $("#planned_dive_end_date").data("dateinput");
        endDatePicker.setValue(startDatePicker.getValue());
    });
+   
+   $(".change-document-category select").change(function() {
+       $.ajax($(this).data("href"), {
+           type: "PUT",
+           data: {"document[category]": $(this).find("option:selected").val()}
+       });
+       $(this).parents(".document").slideUp();
+   });
 });
 
