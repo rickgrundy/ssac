@@ -133,9 +133,7 @@ a.button {
   background: lighten($notice, 45%);
 }
 
-form {
-  margin-bottom: $spacing*6;
-  
+form {  
   select {
     display: block;
     margin-bottom: $spacing;
@@ -342,4 +340,8 @@ dl {
 
 .section-links {
   font-size: 0.9em;
+}
+
+.row .equipment {
+  min-height: 220px;
 }
