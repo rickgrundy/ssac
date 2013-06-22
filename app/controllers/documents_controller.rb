@@ -3,7 +3,8 @@ class DocumentsController < ApplicationController
   before_filter :is_administrator?, only: [:update]
   
   def index
-    @categories = Document.order(:document_file_name).all.group_by(&:category)
+    unordered_categories = Document.order(:document_file_name).all.group_by(&:category)
+    @categories = Document::CATEGORIES.map { |cat| [cat, unordered_categories[cat]] if unordered_categories[cat] }.compact
     @document = Document.new
   end
   
