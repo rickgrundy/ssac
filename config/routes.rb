@@ -19,6 +19,7 @@ Ssac::Application.routes.draw do
     put :toggle_star, on: :member
   end
   resources :documents
+  resources :equipment
   
   # Legacy URLs from previous version of site
   match "/trip_report/:slug" => redirect("/trip_reports/%{slug}")

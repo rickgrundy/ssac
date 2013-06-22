@@ -42,5 +42,14 @@ $(function() {
        });
        $(this).parents(".document").slideUp();
    });
+   
+   $(".equipment :input").keypress(function() {
+      $(this).parents("form").find(":submit").fadeIn();
+   });
+   
+   $(".equipment form").submit(function() {
+       $(this).find(":submit").hide();
+       $(this).find(".note").text("Edited by me just now")
+   });
 });
 

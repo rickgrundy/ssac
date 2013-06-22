@@ -29,6 +29,7 @@
         
           %h5 Members Only
           =link_to "Club Documents", documents_path
+          =link_to "Club Equipment", equipment_index_path(action: :index)
           
         .row.like-button
           =render partial: "layouts/facebook_like_button", faces: false

@@ -1,0 +1,22 @@
+-content_for :title, "Club Equipment"
+
+-@equipment.in_groups_of(3).each do |row|
+  .row
+    -row.compact.each do |equipment|
+      .fourcol.equipment
+        =form_for equipment, remote: true do |f|
+          %h3=equipment.name
+          
+          =f.label :holder, "Last seen with"
+          =f.text_field :holder
+
+          -if administrator?
+            =f.label :notes
+            =f.text_area :notes
+          -else
+            =markdown equipment.notes
+                        
+          =f.submit "Save Changes", {style: "display: none"}
+          
+          %span.note
+            ="Edited by #{equipment.updated_by.name} on #{format_date equipment.updated_at}"

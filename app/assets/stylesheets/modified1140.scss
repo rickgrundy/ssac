@@ -72,7 +72,7 @@ width: 100%;
 float: left;
 }
 
-.last {
+.row .last, .row > div:last-child {
 margin-right: 0px;
 float: right;
 }
@@ -93,7 +93,8 @@ max-width: 100%;
 	padding-right: 0px;
 	}
 	
-	.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
+	.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol,
+	.row .last, .row > div:last-child {
 	width: auto;
 	float: none;
 	margin-left: 0px;
@@ -125,9 +126,6 @@ max-width: 100%;
 .row:last-child, .row.last {
   margin-bottom: $spacing;
   border-bottom: none;
-}
-.row .row:nth-child(1) {
-  padding-top: 0;
 }
 
 .sidebar {
@@ -187,6 +185,9 @@ max-width: 100%;
     a {
       float: left;
       margin-right: 10px;
+    }
+    h5 {
+      display: none;
     }
   }
   .grid {
