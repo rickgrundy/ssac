@@ -1,6 +1,9 @@
 %p
   %h4 Where?
-  =@planned_dive.destination
+  -if @planned_dive.meeting_place_and_time.present?
+    ="#{@planned_dive.destination} (#{@planned_dive.meeting_place_and_time})"
+  -else
+    =@planned_dive.destination
   
 %p
   %h4 When?
