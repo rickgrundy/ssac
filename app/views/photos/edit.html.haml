@@ -2,7 +2,7 @@
 
 .row.last
   .eightcol
-    =form_for @photo, {:multipart => true}do |f|
+    =form_for @photo, {:multipart => true} do |f|
       =errors_for(@photo)
       
       / Now that we're using CLoudfront we can't change the image until we explicitly invalidate the cache, or include the image version in the filename.

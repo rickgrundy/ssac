@@ -345,3 +345,9 @@ dl {
 .row .equipment {
   min-height: 220px;
 }
+
+.uploading {
+  clear: both;
+  background: $subtle;
+  padding: $spacing;
+}

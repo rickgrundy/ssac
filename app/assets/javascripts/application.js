@@ -51,5 +51,10 @@ $(function() {
        $(this).find(":submit").hide();
        $(this).find(".note").text("Edited by me just now")
    });
+   
+   $("form#upload_photos").submit(function() {
+      $(this).find(":submit").hide();
+      $(this).append("<div class='uploading'>Uploading photos. This might take a few minutes on slow connections…</div>");
+   });
 });
 

@@ -2,7 +2,7 @@
 
 .row.last
   .eightcol
-    =form_tag upload_photos_trip_report_path(@trip_report), {:multipart => true} do
+    =form_tag upload_photos_trip_report_path(@trip_report), {:multipart => true, id: "upload_photos"} do
       -Photo::UPLOAD_COUNT.times do |i|
         .row
           %label{for: "photo_#{i}[image]"} Title
