@@ -1,5 +1,6 @@
 module ApplicationHelper
   DATE_FORMAT = '%d %B %Y'
+  MARKDOWN = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new)
   
   def administrator?
     current_user && current_user.administrator
@@ -11,7 +12,7 @@ module ApplicationHelper
   
   def markdown(text, trunc=false)
     text = text.truncate(trunc) if trunc
-    raw Redcarpet.new(text).to_html
+    raw MARKDOWN.render(text)
   end
   
   def in_paragraphs(text)

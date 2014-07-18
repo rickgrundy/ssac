@@ -9,13 +9,15 @@ class TripReport < ActiveRecord::Base
   
   EARLIEST_YEAR = 2006
   MIN_PARAGRAPH_LENGTH = 200
+  
+  MARKDOWN = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new)
     
   def random_photo
     photos.starred.randomised.first
   end
   
   def paragraphs
-    paras = Markdown.new(self.report).to_html.split("</p>").reject(&:blank?).map { |p| p += "</p>" }
+    paras = MARKDOWN.render(self.report).split("</p>").reject(&:blank?).map { |p| p += "</p>" }
     for i in 0..paras.length - 2 do
       if paras[i].length < MIN_PARAGRAPH_LENGTH
         paras[i+1] = paras[i] + paras[i+1]

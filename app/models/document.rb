@@ -10,7 +10,6 @@ class Document < ActiveRecord::Base
   ]
   
   belongs_to :user
-  validates_attachment_presence :document
     
   has_attached_file :document, {
     :whiny => true,
@@ -24,4 +23,6 @@ class Document < ActiveRecord::Base
     :bucket => "sydneysubaquaclub-#{Rails.env}",
     :path => "files/:filename",
   }
+  
+  validates_attachment_presence :document
 end

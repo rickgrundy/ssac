@@ -1,22 +1,22 @@
 source 'https://rubygems.org'
 
-gem 'thin'
-gem 'rails', '3.2.11'
-gem 'jquery-rails', '2.1.4'
-gem 'haml', '3.1.4'
+gem 'puma'
+gem 'rails', '~> 3.2'
+gem 'jquery-rails', '~> 2.1'
+gem 'haml', '~> 3.1'
 gem 'devise'
-gem 'friendly_id', '~> 4.0.0'
+gem 'friendly_id', '~> 4.0'
 gem 'paperclip'
-gem 'aws-sdk', '~> 1.3.4'
+gem 'aws-sdk', '~> 1.3'
 gem 'pg'
 gem 'redcarpet'
-gem 'newrelic_rpm'
+gem 'newrelic_rpm', '~> 3.5'
 gem 'fb_graph'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails',   '~> 3.2'
+  gem 'coffee-rails', '~> 3.2'
+  gem 'uglifier', '>= 1.0'
 end
 
 

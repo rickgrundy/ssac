@@ -6,8 +6,6 @@ class Photo < ActiveRecord::Base
   scope :not_starred, where(starred: false)
   scope :sorted, order: "ID ASC"
   
-  validates_attachment_presence :image
-  
   has_attached_file :image, {
     :whiny => true,
     :storage => :s3,
@@ -27,6 +25,8 @@ class Photo < ActiveRecord::Base
       :homepage_variable => "280x200>"
     }
   }
+  
+  validates_attachment_presence :image
   
   UPLOAD_COUNT = 5
   
