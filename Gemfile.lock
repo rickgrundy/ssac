@@ -103,6 +103,8 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    rack-utf8_sanitizer (1.2.2)
+      rack (~> 1.0)
     rails (3.2.19)
       actionmailer (= 3.2.19)
       actionpack (= 3.2.19)
@@ -175,6 +177,7 @@ DEPENDENCIES
   paperclip
   pg
   puma
+  rack-utf8_sanitizer
   rails (~> 3.2)
   redcarpet
   rspec-rails (~> 2.6)

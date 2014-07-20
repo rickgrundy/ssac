@@ -1,5 +1,4 @@
 require File.expand_path('../boot', __FILE__)
-require File.expand_path('../utf8_sanitizer', __FILE__)
 
 require 'rails/all'
 
@@ -60,6 +59,6 @@ module Ssac
     
     config.action_mailer.default_url_options = { :host => "sydneysubaquaclub.com" }
     
-    config.middleware.use Utf8Sanitizer
+    config.middleware.insert 0, Rack::UTF8Sanitizer
   end
 end

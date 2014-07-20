@@ -12,6 +12,7 @@ gem 'pg'
 gem 'redcarpet'
 gem 'newrelic_rpm', '~> 3.5'
 gem 'fb_graph'
+gem 'rack-utf8_sanitizer'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2'
