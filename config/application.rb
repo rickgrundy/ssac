@@ -9,6 +9,20 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+class RejectDodgyChineseCrawlers
+  def initialize(app)
+    @app = app 
+  end 
+
+  def call(env)
+    if env['HTTP_X_FORWARDED_FOR'].split(',').first =~ /^183/
+      return [404, {}, []]
+    else
+      @app.call(env)
+    end
+  end 
+end
+
 module Ssac
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -60,5 +74,6 @@ module Ssac
     config.action_mailer.default_url_options = { :host => "sydneysubaquaclub.com" }
     
     config.middleware.insert 0, Rack::UTF8Sanitizer
+    config.middleware.insert 0, RejectDodgyChineseCrawlers
   end
 end
