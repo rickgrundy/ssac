@@ -25,4 +25,5 @@ class Document < ActiveRecord::Base
   }
   
   validates_attachment_presence :document
+  do_not_validate_attachment_file_type :document
 end
