@@ -15,7 +15,7 @@ class RejectDodgyChineseCrawlers
   end 
 
   def call(env)
-    if env['HTTP_X_FORWARDED_FOR'].split(',').first =~ /^183/
+    if env.include?('HTTP_X_FORWARDED_FOR') and env['HTTP_X_FORWARDED_FOR'].split(',').first =~ /^183/
       return [404, {}, []]
     else
       @app.call(env)
