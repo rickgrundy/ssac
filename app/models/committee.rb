@@ -10,6 +10,7 @@ class Committee
   SECRETARY = Position.new('Secretary', 'secretary@sydneysubaquaclub.com', 'Sam Warwick')
   TREASURER = Position.new('Treasurer', 'finance@sydneysubaquaclub.com', 'Ben Crossett')
   EXPEDITIONS_OFFICER = Position.new('Expeditions Officer', 'diving@sydneysubaquaclub.com', 'Fe Edwards')
+  PUBLICITY_OFFICER = Position.new('Publicity Officer', 'publicity@sydneysubaquaclub.com', 'Marie Ward')
 
-  POSITIONS = [CHAIRMAN, DIVING_OFFICER, SECRETARY, TREASURER, EXPEDITIONS_OFFICER]
+  POSITIONS = [CHAIRMAN, DIVING_OFFICER, SECRETARY, TREASURER, EXPEDITIONS_OFFICER, PUBLICITY_OFFICER]
 end
