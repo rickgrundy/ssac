@@ -7,7 +7,7 @@ class Committee
 
   CHAIRMAN = Position.new('Chairman', 'chairman@sydneysubaquaclub.com', 'Andy Garvey')
   DIVING_OFFICER = Position.new('Diving Officer', 'divingofficer@sydneysubaquaclub.com', 'Owen Davies')
-  SECRETARY = Position.new('Secretary', 'secretary@sydneysubaquaclub.com', 'Ben Crossett')
+  SECRETARY = Position.new('Secretary', 'secretary@sydneysubaquaclub.com', 'Paul Furniss')
   TREASURER = Position.new('Treasurer', 'finance@sydneysubaquaclub.com', 'Gary Whatling')
   EXPEDITIONS_OFFICER = Position.new('Expeditions Officer', 'diving@sydneysubaquaclub.com', 'Fe Edwards')
   PUBLICITY_OFFICER = Position.new('Publicity Officer', 'publicity@sydneysubaquaclub.com', 'Marie Ward')
