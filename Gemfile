@@ -3,7 +3,7 @@ ruby '2.2.10'
 
 gem 'puma'
 gem 'rails', '~> 3.2'
-gem 'jquery-rails', '~> 2.1'
+gem 'jquery-rails', '~> 3.1'
 gem 'haml', '~> 3.1'
 gem 'devise'
 gem 'friendly_id', '~> 4.0'
